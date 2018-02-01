@@ -1110,7 +1110,7 @@
 
     move-result v3
 
-    const/4 v0, 0x3
+    const/4 v0, 0x1
 
     if-eq v3, v0, :cond_2
 

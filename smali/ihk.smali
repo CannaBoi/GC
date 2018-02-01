@@ -184,7 +184,7 @@
     goto :goto_1
 
     :cond_2
-    move v0, v1
+    move v0, v2
 
     goto :goto_2
 
@@ -224,7 +224,7 @@
     goto :goto_9
 
     :cond_a
-    move v0, v2
+    move v0, v1
 
     goto :goto_a
 

@@ -763,4 +763,24 @@ Muovi disp. lentam."</string>
     <string name="zoom_announcement">Il valore di zoom è %.1f</string>
     <string name="zoom_minus_desc">Diminuisci lo zoom</string>
     <string name="zoom_plus_desc">Aumenta lo zoom</string>
+    <string name="pref_developer_title">Debug e strumenti</string>
+    <string name="pref_parameters_camera_title">Parametri HDR+</string>
+    <string name="pref_parameters_camera_0">Predefinito (più basso)</string>
+    <string name="pref_parameters_camera_1">Basso</string>
+    <string name="pref_parameters_camera_2">Medio</string>
+    <string name="pref_parameters_camera_3">Alto</string>
+    <string name="pref_parameters_camera_4">Molto alto</string>
+    <string name="pref_parameters_camera_5">Super alto</string>
+    <string name="pref_compress_jpeg_title">"HDR+ qualità dell'immagine"</string>
+    <string name="pref_compress_jpeg_summary">La qualità finale di jpeg è %s</string>
+    <string name="pref_compress_dng_title">Comprime le immagini RAW</string>
+    <string name="pref_compress_dng_summary">Comprimi DNG per ridurre le dimensioni del file</string>
+    <string name="pref_enable_gouda_mode_title">"Abilita sfocatura dell'obiettivo"</string>
+    <string name="pref_enable_gouda_mode_summary">"Sostituire la modalità verticale con la sfocatura dell'obiettivo. Riavviare l'applicazione, le modifiche avranno effetto al prossimo avvio."</string>
+    <string name="pref_refocus_resolution_title">Risoluzione sfocatura obiettivo</string>
+    <string name="pref_enable_zsl_title">Abilita ZSL</string>
+    <string name="pref_enable_zsl_summary">Abilita Zero Shutter Lag su configurazioni supportate</string>
+    <string name="pref_config_camera_title">Config camera HDR+</string>
+    <string name="pref_enable_lowlight_title">Migliora in condizioni di scarsa illuminazione</string>
+    <string name="pref_enable_lowlight_summary">Rimuove la tonalità rosa/rossastro/magenta in condizioni di scarsa illuminazione</string>
 </resources>

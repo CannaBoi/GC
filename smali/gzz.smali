@@ -229,12 +229,6 @@
 .method public final c()Z
     .locals 1
 
-    invoke-virtual {p0}, Lgzz;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
     iget-object v0, p0, Lgzz;->b:Lihk;
 
     iget-boolean v0, v0, Lihk;->h:Z
@@ -476,13 +470,5 @@
     const/4 v0, 0x1
 
     :cond_0
-    return v0
-.end method
-
-.method public final k()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
     return v0
 .end method

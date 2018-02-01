@@ -322,15 +322,15 @@
     </string-array>
     <string-array name="pref_config_camera_entries">
         <item>@string/pref_config_camera_0</item>
+        <item>@string/pref_config_camera_1</item>
+        <item>@string/pref_config_camera_2</item>
         <item>@string/pref_config_camera_3</item>
-        <item>@string/pref_config_camera_5</item>
-        <item>@string/pref_config_camera_7</item>
     </string-array>
     <string-array name="pref_config_camera_entryvalues">
         <item>0</item>
+        <item>1</item>
+        <item>2</item>
         <item>3</item>
-        <item>5</item>
-        <item>7</item>
     </string-array>
     <string-array name="pref_compress_jpeg_entries">
         <item>@string/pref_compress_jpeg_50</item>

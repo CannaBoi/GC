@@ -765,23 +765,29 @@
     <string name="zoom_plus_desc">Увеличить</string>
     <string name="pref_developer_title">Отладка и инструменты</string>
     <string name="pref_parameters_camera_title">Параметры HDR+</string>
-    <string name="pref_parameters_camera_0">По умолчанию (самый низкий)</string>
-    <string name="pref_parameters_camera_1">Низкий</string>
-    <string name="pref_parameters_camera_2">средний</string>
-    <string name="pref_parameters_camera_3">Высокая</string>
-    <string name="pref_parameters_camera_4">Очень высоко</string>
-    <string name="pref_parameters_camera_5">Супер высокий</string>
+    <string name="pref_parameters_camera_0">Самые низкие (По умолчанию)</string>
+    <string name="pref_parameters_camera_1">Низкие</string>
+    <string name="pref_parameters_camera_2">Средние</string>
+    <string name="pref_parameters_camera_3">Высокие</string>
+    <string name="pref_parameters_camera_4">Очень высокие</string>
+    <string name="pref_parameters_camera_5">Супер высокие</string>
     <string name="pref_compress_jpeg_title">Качество изображения HDR+</string>
-    <string name="pref_compress_jpeg_summary">Конечное качество jpeg составляет %s</string>
+    <string name="pref_compress_jpeg_summary">Итоговое качество jpg составляет %s</string>
+    <string name="pref_compress_jpeg_95">95% (По умолчанию)</string>
     <string name="pref_compress_dng_title">Сжатие RAW-изображений</string>
     <string name="pref_compress_dng_summary">Сжатие DNG для уменьшения размера файла</string>
-    <string name="pref_enable_gouda_mode_title">Включить размытие линз</string>
-    <string name="pref_enable_gouda_mode_summary">"Заменить портретный режим с размытием линзы.
-Перезапустите приложение, изменения вступят в силу при следующем запуске."</string>
-    <string name="pref_refocus_resolution_title">Разрешение размытия линзы</string>
-    <string name="pref_enable_zsl_title">Включить ZSL</string>
-    <string name="pref_enable_zsl_summary">Включить Zero Shutter Lag на поддерживаемых конфигурациях</string>
-    <string name="pref_config_camera_title">Конфигурация камеры HDR +</string>
-    <string name="pref_enable_lowlight_title">Улучшение фотографий при слабом освещении</string>
-    <string name="pref_enable_lowlight_summary">Удаление оттенков розового/красноватого/пурпурного оттенка в условиях низкой освещенности</string>
+    <string name="pref_enable_gouda_mode_title">Использовать режим размытия</string>
+    <string name="pref_enable_gouda_mode_summary">"Режим размытия заменят портретный режим.
+Чтобы изменения вступили в силу требуется перезапуск приложения."</string>
+    <string name="pref_refocus_resolution_title">Разрешение фото в режиме размытия</string>
+    <string name="pref_refocus_resolution_5">5 Мп (По умолчанию)</string>
+    <string name="pref_refocus_resolution_8">8 Мп</string>
+    <string name="pref_refocus_resolution_10">10 Мп</string>
+    <string name="pref_refocus_resolution_12">12 Мп</string>
+    <string name="pref_enable_zsl_title">ZSL (Нулевая задержка затвора)</string>
+    <string name="pref_enable_zsl_summary">Использовать ZSL для поддерживаемых конфигураций</string>
+    <string name="pref_config_camera_title">Конфигурация HDR+</string>
+    <string name="pref_config_camera_0">Авто</string>
+    <string name="pref_enable_lowlight_title">Улучшить фото при слабом освещении</string>
+    <string name="pref_enable_lowlight_summary">Удаление оттенков розового/красного/пурпурного цвета в условиях низкой освещенности</string>
 </resources>

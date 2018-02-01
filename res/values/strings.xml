@@ -878,7 +878,7 @@ Move device slowly"</string>
     <string name="pref_parameters_camera_4">Very High</string>
     <string name="pref_parameters_camera_5">Super High</string>
     <string name="pref_compress_jpeg_title">HDR+ image quality</string>
-    <string name="pref_compress_jpeg_summary">Final Quality of jpg is %s</string>
+    <string name="pref_compress_jpeg_summary">Final Quality of jpeg is %s</string>
     <string name="pref_compress_jpeg_default">95</string>
     <string name="pref_compress_jpeg_50">50%</string>
     <string name="pref_compress_jpeg_70">70%</string>
@@ -902,15 +902,15 @@ Restart the application, the changes will take effect at the next start."</strin
     <string name="pref_refocus_resolution_8">8 Mpx</string>
     <string name="pref_refocus_resolution_10">10 Mpx</string>
     <string name="pref_refocus_resolution_12">12 Mpx</string>
-    <string name="pref_enable_zsl_title">Use ZSL</string>
+    <string name="pref_enable_zsl_title">Enable ZSL</string>
     <string name="pref_enable_zsl_summary">Enable Zero Shutter Lag on supported configurations</string>
     <string name="pref_config_camera_title">Config camera HDR+</string>
     <string name="pref_config_camera_summary">%s</string>
     <string name="pref_config_camera_default">0</string>
     <string name="pref_config_camera_0">AUTO</string>
-    <string name="pref_config_camera_3">Nexus 6 Auto</string>
-    <string name="pref_config_camera_5">Nexus 6P</string>
-    <string name="pref_config_camera_7">Pixel 2017 Zsl Hdr+</string>
-    <string name="pref_enable_lowlight_title">Improve photos in low light</string>
+    <string name="pref_config_camera_1">Nexus 6 Auto</string>
+    <string name="pref_config_camera_2">Nexus 6P</string>
+    <string name="pref_config_camera_3">Pixel 2017 Zsl Hdr+</string>
+    <string name="pref_enable_lowlight_title">Improve in low light</string>
     <string name="pref_enable_lowlight_summary">Removing Pink/Reddish/Magenta hue in Low Light</string>
 </resources>

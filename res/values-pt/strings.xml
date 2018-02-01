@@ -21,4 +21,24 @@
     <string name="preferences_license_title">Licenças de código aberto</string>
     <string name="search_menu_title">Pesquisar</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="pref_developer_title">Depuração e ferramentas</string>
+    <string name="pref_parameters_camera_title">Parâmetros HDR+</string>
+    <string name="pref_parameters_camera_0">Padrão (menor)</string>
+    <string name="pref_parameters_camera_1">Baixo</string>
+    <string name="pref_parameters_camera_2">Médio</string>
+    <string name="pref_parameters_camera_3">Alto</string>
+    <string name="pref_parameters_camera_4">Muito alto</string>
+    <string name="pref_parameters_camera_5">Super alto</string>
+    <string name="pref_compress_jpeg_title">Qualidade de imagem HDR+</string>
+    <string name="pref_compress_jpeg_summary">Qualidade final do jpeg é %s</string>
+    <string name="pref_compress_dng_title">Compressar imagens RAW</string>
+    <string name="pref_compress_dng_summary">Comprimir DNG para reduzir o tamanho do arquivo</string>
+    <string name="pref_enable_gouda_mode_title">Ativar o borrão da lente</string>
+    <string name="pref_enable_gouda_mode_summary">Substitua o retrato de moda com o borrão da lente. Reinicie o aplicativo, as mudanças entrarão em vigor no próximo começo.</string>
+    <string name="pref_refocus_resolution_title">Resolução do borrão da lente</string>
+    <string name="pref_enable_zsl_title">Ativar ZSL</string>
+    <string name="pref_enable_zsl_summary">Ativar intervalo de obturação zero em configurações suportadas</string>
+    <string name="pref_config_camera_title">Configuração da câmera HDR+</string>
+    <string name="pref_enable_lowlight_title">Melhorar com pouca luz</string>
+    <string name="pref_enable_lowlight_summary">Removendo tonalidade rosa/avermelhada/magenta em pouca luz</string>
 </resources>
