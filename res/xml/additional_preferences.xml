@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceCategory android:title="@string/pref_category_about" android:key="_pref_category_about"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/pref_category_about" android:key="pref_category_about">
+        <PreferenceScreen android:title="Google Camera">
+            <intent android:action="android.intent.action.VIEW" android:data="https://support.google.com/googlecamera/?hl=en-GB#topic=6164365" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="B-S-G" android:key="pref_bsg_about" android:summary="Is the main developer working on this port. Most apks from other devs are based on his work.">
+            <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=243055" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Arnova8G2" android:key="pref_arnova_about" android:summary="He makes B-S-G's work compatible with more phones">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Charles_l" android:key="pref_charles1_about" android:summary="Develop the Camera NX mod for all google devices">
+            <intent android:action="android.intent.action.VIEW" android:data="https://chromloop.com" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Other developer" android:summary="ivanich, scrubber, cstark27, miniuser123">
+            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
+        </PreferenceScreen>
+        <PreferenceScreen android:summary="Why so many versions/ports/devs ?">
+            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera/versions" />
+        </PreferenceScreen>
+        <PreferenceScreen android:summary="Info and download of the other version on S4turno's website">
+            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="This version is developed by" android:summary="Arnova8G2">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
+        </PreferenceScreen>
+    </PreferenceScreen>
+</PreferenceCategory>
