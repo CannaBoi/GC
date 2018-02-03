@@ -2,32 +2,20 @@
 <PreferenceCategory android:title="@string/pref_category_about" android:key="_pref_category_about"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/pref_category_about" android:key="pref_category_about">
-        <PreferenceScreen android:title="Google Camera">
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_title">
             <intent android:action="android.intent.action.VIEW" android:data="https://support.google.com/googlecamera/?hl=en-GB#topic=6164365" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="B-S-G" android:key="pref_bsg_about" android:summary="Is the main developer working on this port. Most apks from other devs are based on his work.">
-            <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=243055" />
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_1_title" android:summary="@string/about_dev_1_summary"/>
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_2_title" android:summary="@string/about_dev_2_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=7578917" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="Arnova8G2" android:key="pref_arnova_about" android:summary="He makes B-S-G's work compatible with more phones">
-            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_3_title" android:summary="@string/about_dev_3_summary"/>
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_4_title" android:summary="@string/about_dev_4_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/oneplus-3/oneplus-3--3t-cross-device-themes-apps--mods/app-google-camera-mod-t3735251" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="Charles_l" android:key="pref_charles1_about" android:summary="Develop the Camera NX mod for all google devices">
-            <intent android:action="android.intent.action.VIEW" android:data="https://chromloop.com" />
-        </PreferenceScreen>
-        <PreferenceScreen android:title="defcomg" android:key="pref_defcomg_about" android:summary="Develop lib OP3/OP3T/OP5/OP5T for Front HDR+, Manual Focus and Manual ISO">
-            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=377973" />
-        </PreferenceScreen>
-        <PreferenceScreen android:title="Other developer" android:summary="ivanich, scrubber, cstark27, miniuser123">
-            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
-        </PreferenceScreen>
-        <PreferenceScreen android:summary="Why so many versions/ports/devs ?">
-            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera/versions" />
-        </PreferenceScreen>
-        <PreferenceScreen android:summary="Info and download of the other version on S4turno's website">
-            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
-        </PreferenceScreen>
-        <PreferenceScreen android:title="This version is GoogleCamera-Pixel2Mod-Arnova8G2-V4.1 by" android:summary="Arnova8G2">
-            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
+        <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/about_dev_5_title" android:summary="@string/about_dev_5_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="https://t.me/joinchat/FxCi5g-xMUhXBXB4ua176Q" />
         </PreferenceScreen>
     </PreferenceScreen>
 </PreferenceCategory>
+            
