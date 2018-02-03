@@ -91,7 +91,7 @@
 
     if-eqz v1, :cond_0
 
-    const-string v0, "640x480,2592x1458,2960x1440"
+    const-string v0, "2592x1458"
 
     :cond_0
     iget-object v1, p0, Lbhn;->a:Landroid/content/ContentResolver;

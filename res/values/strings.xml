@@ -902,8 +902,8 @@ Restart the application, the changes will take effect at the next start."</strin
     <string name="pref_refocus_resolution_8">8 Mpx</string>
     <string name="pref_refocus_resolution_10">10 Mpx</string>
     <string name="pref_refocus_resolution_12">12 Mpx</string>
-    <string name="pref_enable_zsl_title">Enable ZSL</string>
-    <string name="pref_enable_zsl_summary">Enable Zero Shutter Lag on supported configurations</string>
+    <string name="pref_enable_zsl_title">Enable Zero Shutter Lag</string>
+    <string name="pref_enable_zsl_summary">Shutter speed is faster</string>
     <string name="pref_config_camera_title">Config camera HDR+</string>
     <string name="pref_config_camera_summary">%s</string>
     <string name="pref_config_camera_default">0</string>

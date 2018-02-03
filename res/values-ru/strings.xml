@@ -527,6 +527,7 @@
     <string name="pref_category_general">Общие</string>
     <string name="pref_category_photo_sphere_and_panorama">Photo Sphere и панорамные снимки</string>
     <string name="pref_category_resolution_quality">Разрешение и качество</string>
+    <string name="pref_developer_settings">Настройки для разработчиков</string>
     <string name="pref_experimental">Экспериментальная версия</string>
     <string name="pref_exposure_label">ЭКСПОЗИЦИЯ</string>
     <string name="pref_exposure_title">Экспозиция</string>

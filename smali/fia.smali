@@ -322,7 +322,7 @@
 
     if-eqz v5, :cond_0
 
-    const-string v0, "1440x1080,1920x1080,2960x1440"
+    const-string v0, "1440x1080,1920x1080"
 
     :cond_0
     iget-object v4, v4, Lbhn;->a:Landroid/content/ContentResolver;
@@ -383,7 +383,7 @@
 
     if-eqz v5, :cond_5
 
-    const-string v0, "1440x1080,1920x1080,2960x1440"
+    const-string v0, "1440x1080,1920x1080"
 
     :cond_5
     iget-object v4, v4, Lbhn;->a:Landroid/content/ContentResolver;

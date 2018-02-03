@@ -31,6 +31,10 @@
 
     iput-object v0, p0, Lfhl;->a:Ljava/util/List;
 
+    sget-object v1, Lige;->a:Lige;
+
+    if-eqz v1, :cond_0
+
     invoke-virtual {p2}, Lgds;->c()Z
 
     move-result v0

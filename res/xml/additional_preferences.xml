@@ -14,6 +14,9 @@
         <PreferenceScreen android:title="Charles_l" android:key="pref_charles1_about" android:summary="Develop the Camera NX mod for all google devices">
             <intent android:action="android.intent.action.VIEW" android:data="https://chromloop.com" />
         </PreferenceScreen>
+        <PreferenceScreen android:title="defcomg" android:key="pref_defcomg_about" android:summary="Develop lib OP3/OP3T/OP5/OP5T for Front HDR+, Manual Focus and Manual ISO">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=377973" />
+        </PreferenceScreen>
         <PreferenceScreen android:title="Other developer" android:summary="ivanich, scrubber, cstark27, miniuser123">
             <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
         </PreferenceScreen>
@@ -23,7 +26,7 @@
         <PreferenceScreen android:summary="Info and download of the other version on S4turno's website">
             <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="This version is developed by" android:summary="Arnova8G2">
+        <PreferenceScreen android:title="This version is GoogleCamera-Pixel2Mod-Arnova8G2-V4.1 by" android:summary="Arnova8G2">
             <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
         </PreferenceScreen>
     </PreferenceScreen>
