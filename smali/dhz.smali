@@ -201,6 +201,19 @@
     const/4 v0, 0x0
 
     :cond_1
+    iget-object v1, p1, Lbhn;->b:Lgzz;
+
+    iget-object v1, v1, Lgzz;->b:Lihk;
+
+    invoke-virtual {v1}, Lihk;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v0, 0x1
+
+    :cond_2
     invoke-static {v0}, Ldij;->a(I)Ljht;
 
     move-result-object v0
@@ -214,7 +227,7 @@
 
     iget-boolean v0, v0, Lihj;->b:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     iget-object v0, p1, Lbhn;->b:Lgzz;
 
@@ -222,7 +235,7 @@
 
     iget-boolean v0, v0, Lihk;->a:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object v0, p1, Lbhn;->b:Lgzz;
 
@@ -230,9 +243,9 @@
 
     iget-boolean v0, v0, Lihk;->c:Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    :cond_2
+    :cond_3
     const/4 v0, 0x1
 
     :goto_1
@@ -242,18 +255,31 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     const/4 v0, 0x0
 
-    :cond_3
+    :cond_4
+    iget-object v1, p1, Lbhn;->b:Lgzz;
+
+    iget-object v1, v1, Lgzz;->b:Lihk;
+
+    invoke-virtual {v1}, Lihk;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const/4 v0, 0x1
+
+    :cond_5
     invoke-static {v0}, Ldij;->a(I)Ljht;
 
     move-result-object v0
 
     goto :goto_0
 
-    :cond_4
+    :cond_6
     iget-object v0, p1, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v1, "camera:capture_support_level_override_front"

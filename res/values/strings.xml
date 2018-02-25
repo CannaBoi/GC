@@ -907,10 +907,19 @@ Restart the application, the changes will take effect at the next start."</strin
     <string name="pref_config_camera_title">Config camera HDR+</string>
     <string name="pref_config_camera_summary">%s</string>
     <string name="pref_config_camera_default">0</string>
-    <string name="pref_config_camera_0">AUTO</string>
+    <string name="pref_config_camera_0">Auto</string>
     <string name="pref_config_camera_1">Nexus 6 Auto</string>
     <string name="pref_config_camera_2">Nexus 6P</string>
     <string name="pref_config_camera_3">Pixel 2017 Zsl Hdr+</string>
     <string name="pref_enable_lowlight_title">Improve in low light</string>
     <string name="pref_enable_lowlight_summary">Removing Pink/Reddish/Magenta hue in Low Light</string>
+    <string name="pref_enable_noise_title">Improved Sharpness</string>
+    <string name="pref_enable_noise_summary">Improves sharpness but photos are noisier. Restart the application, the changes will take effect at the next start</string>
+    <string name="pref_enable_front_hdr_title">Disable front HDR+</string>
+    <string name="pref_enable_front_hdr_summary">By disabling front HDR+ portrait mode no longer works. Restart the application, the changes will take effect at the next start</string>
+    <string name="pref_enable_aemode_title">Auto-exposure mode</string>
+    <string name="pref_enable_aemode_default">0</string>
+    <string name="pref_aemode_0">Auto</string>
+    <string name="pref_aemode_1">Fast slow shutter</string>
+    <string name="pref_aemode_2">Slow shutter</string>
 </resources>

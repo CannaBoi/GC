@@ -41,6 +41,16 @@
 
     iput-boolean v1, v0, Lihk;->m:Z
 
+    invoke-virtual {p0}, Lbhn;->s()I
+
+    move-result v1
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iput-boolean v1, v0, Lihk;->n:Z
+
     return-void
 .end method
 
@@ -242,13 +252,76 @@
 
     const-string v2, "camera:gcam_enabled"
 
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->a:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->c:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->d:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->b:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->f:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->g:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbhn;->b:Lgzz;
+
+    invoke-virtual {v0}, Lgzz;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     const/4 v0, 0x1
 
+    :goto_0
     invoke-virtual {p0, v1, v2, v0}, Lbhn;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public final e()I
@@ -534,6 +607,42 @@
     .locals 1
 
     const-string v0, "pref_enable_zsl_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public r()I
+    .locals 1
+
+    const-string v0, "pref_enable_noise_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public s()I
+    .locals 1
+
+    const-string v0, "pref_enable_front_hdr_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public t()I
+    .locals 1
+
+    const-string v0, "pref_enable_aemode_key"
 
     invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
 

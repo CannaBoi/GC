@@ -1091,13 +1091,13 @@
 
     if-eqz v3, :cond_1
 
-    const-string v3, "pref_refocus_resolution_key"
+    const-string v3, "pref_camera_dirty_lens_key"
 
     invoke-virtual {p0, v3}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Landroid/preference/ListPreference;
+    check-cast v3, Lcom/google/android/apps/camera/legacy/app/settings/ManagedSwitchPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 

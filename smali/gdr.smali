@@ -276,19 +276,36 @@
 
     const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_3
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_3
 
+    invoke-virtual {p0}, Lgdr;->b()Lige;
+
+    move-result-object v0
+
+    sget-object v1, Lige;->b:Lige;
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lgdr;->e:Lgzz;
+
+    invoke-virtual {v0}, Lgzz;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_0
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
     iget-object v0, v0, Lgzz;->b:Lihk;
 
     iget-boolean v0, v0, Lihk;->b:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
@@ -296,7 +313,7 @@
 
     iget-boolean v0, v0, Lihk;->d:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
@@ -304,7 +321,7 @@
 
     iget-boolean v0, v0, Lihk;->f:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
@@ -312,7 +329,7 @@
 
     iget-boolean v0, v0, Lihk;->g:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
@@ -320,7 +337,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
@@ -328,7 +345,7 @@
 
     iget-boolean v0, v0, Lihk;->c:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p0}, Lgdr;->b()Lige;
 
@@ -336,16 +353,16 @@
 
     sget-object v1, Lige;->b:Lige;
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_2
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lgdr;->e:Lgzz;
 
     iget-object v0, v0, Lgzz;->b:Lihk;
 
     iget-boolean v0, v0, Lihk;->a:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Lgdr;->b()Lige;
 
@@ -353,15 +370,15 @@
 
     sget-object v1, Lige;->b:Lige;
 
-    if-ne v0, v1, :cond_2
+    if-ne v0, v1, :cond_3
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_2
+    :cond_3
     const/4 v0, 0x0
 
     goto :goto_0

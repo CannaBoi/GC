@@ -677,6 +677,8 @@
     move-result v4
 
     :goto_2
+    sput v4, Lcok;->n:I
+
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setImage_rotation(I)V
@@ -811,6 +813,16 @@
 
     :goto_6
     move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcoq;->b:Lcpb;
+
+    iget-object v2, v2, Lcpb;->B:Lbhn;
+
+    invoke-virtual {v2}, Lbhn;->t()I
+
+    move-result v2
+
+    sput v2, Lcok;->j:I
 
     iget-object v2, v0, Lcoq;->i:Lgdq;
 
@@ -2027,7 +2039,17 @@
 
     move-result v0
 
-    sput v0, Lcok;->f:I
+    sput v0, Lcok;->i:I
+
+    iget-object v0, p0, Lcoq;->b:Lcpb;
+
+    iget-object v0, v0, Lcpb;->B:Lbhn;
+
+    invoke-virtual {v0}, Lbhn;->t()I
+
+    move-result v0
+
+    sput v0, Lcok;->j:I
 
     move-object v0, p3
 

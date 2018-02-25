@@ -30,6 +30,8 @@
 
 .field public m:Z
 
+.field public n:Z
+
 
 # direct methods
 .method private constructor <init>(J)V
@@ -224,7 +226,7 @@
     goto :goto_9
 
     :cond_a
-    move v0, v1
+    move v0, v2
 
     goto :goto_a
 
@@ -237,9 +239,9 @@
 .method public static a()Lihk;
     .locals 6
 
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    const-string v0, "Motorola"
 
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    const-string v1, "Shamu"
 
     sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
@@ -512,6 +514,91 @@
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v1, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final d()Z
+    .locals 6
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "hero2lte"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "hero2qltechn"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "dreamlte"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "HWSTF"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "dreamlte"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "lilac"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -163,8 +163,6 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
-
     check-cast v0, Ljava/lang/Float;
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -195,7 +193,6 @@
 
     invoke-virtual {v1, v0}, Lgem;->a(Ljava/lang/Object;)V
 
-    :cond_2
     return-void
 .end method
 

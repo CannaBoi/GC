@@ -110,60 +110,94 @@
     .end array-data
 .end method
 
-.method private final a()Legu;
-    .locals 8
+.method private final a(Z)Legu;
+    .locals 10
 
-    const/4 v7, 0x2
+    const/4 v4, 0x3
 
-    const/4 v6, 0x0
+    const/4 v5, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_0
 
     iget-object v0, p0, Ldio;->c:Ldig;
 
-    const-string v1, "persist.gcam.sm.denom"
+    const-string v3, "persist.gcam.bgae.enabled"
 
-    invoke-virtual {v0, v1}, Ldig;->a(Ljava/lang/String;)I
+    sget-boolean v6, Ldig;->a:Z
+
+    invoke-virtual {v0, v3, v6}, Ldig;->a(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    sget-object v1, Ldio;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    const-string v2, "Smart metering configuration for auto-HDR+ decision: eager = %s, period = %d, max image count = %d"
+    move v0, v1
 
-    const/4 v3, 0x3
+    :goto_0
+    iget-object v3, p0, Ldio;->c:Ldig;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    const-string v6, "persist.gcam.sm.denom"
 
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v3, v6}, Ldig;->a(Ljava/lang/String;)I
 
-    move-result-object v4
+    move-result v6
 
-    aput-object v4, v3, v6
+    if-eqz v0, :cond_1
 
-    const/4 v4, 0x1
+    move v3, v4
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :goto_1
+    sget-object v7, Ldio;->a:Ljava/lang/String;
 
-    move-result-object v5
+    const-string v8, "Smart metering configuration for auto-HDR+ decision: eager = %s, period = %d, max image count = %d"
 
-    aput-object v5, v3, v4
+    new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v9
 
-    aput-object v4, v3, v7
+    aput-object v9, v4, v2
 
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
+    aput-object v2, v4, v1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v5
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v8, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v7, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Legu;
 
-    invoke-direct {v1, v6, v0, v7}, Legu;-><init>(ZII)V
+    invoke-direct {v1, v0, v6, v3}, Legu;-><init>(ZII)V
 
     return-object v1
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v5
+
+    goto :goto_1
 .end method
 
 .method private static a(Lgdq;Lgdp;)Lgkr;
@@ -172,7 +206,7 @@
     :try_start_0
     iget-object v0, p1, Lgdp;->a:Lici;
 
-    const/16 v1, 0x25
+    const/16 v1, 0x23
 
     invoke-static {p0, v0, v1}, Lgkp;->a(Lgdq;Lici;I)Lgkp;
     :try_end_0
@@ -357,6 +391,8 @@
 
     move-result v0
 
+    goto/16 :goto_1
+
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Ldio;->g:Lbip;
@@ -427,7 +463,9 @@
 
     invoke-direct {v3, v4, v0}, Ldqf;-><init>(ILici;)V
 
-    invoke-direct {p0}, Ldio;->a()Legu;
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Ldio;->a(Z)Legu;
 
     move-result-object v4
 
@@ -480,6 +518,7 @@
 
     if-eqz v0, :cond_2
 
+    :goto_1
     sget-object v0, Ldio;->a:Ljava/lang/String;
 
     const-string v1, "Selected Pixel 2017 Zsl Hdr No PD OneCamera configuration."
@@ -490,7 +529,9 @@
 
     move-result-object v1
 
-    invoke-direct {p0}, Ldio;->a()Legu;
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Ldio;->a(Z)Legu;
 
     move-result-object v3
 

@@ -30,7 +30,7 @@
 
 # direct methods
 .method public constructor <init>(Licv;Licz;Lggn;)V
-    .locals 2
+    .locals 3
 
     const/4 v1, 0x0
 
@@ -56,7 +56,21 @@
 
     iput v1, p0, Lggg;->e:I
 
+    invoke-virtual {p0}, Lggg;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/16 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
     const/16 v0, 0x78
+
+    :goto_0
+    const/4 v1, 0x0
 
     iput v0, p0, Lggg;->a:I
 
@@ -425,4 +439,79 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v0
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "lithium"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "chiron"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "potter"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus5"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

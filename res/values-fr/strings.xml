@@ -783,5 +783,9 @@ Redémarrez l'application, les modifications prendront effet au prochain démarr
     <string name="pref_enable_zsl_summary">Activer Zero Shutter Lag sur les configurations prises en charge</string>
     <string name="pref_config_camera_title">Configuration HDR+</string>
     <string name="pref_enable_lowlight_title">Améliorer les photos en basse lumière</string>
-    <string name="pref_enable_lowlight_summary">Suppression de la teinte rose/rougeâtre/magenta en basse lumière</string>
+    <string name="pref_enable_lowlight_summary">Suppression de la teinte rose/rougeâtre/magenta en cas de faible luminosité</string>
+    <string name="pref_enable_noise_title">Améliorer la netteté</string>
+    <string name="pref_enable_noise_summary">"Avec netteté améliorer les photos sont plus bruyantes. Redémarrer l'application, les modifications prendront effet au prochain démarrage"</string>
+    <string name="pref_enable_front_hdr_title">Désactiver le HDR+ frontal</string>
+    <string name="pref_enable_front_hdr_summary">En désactivant HDR+ frontal le mode portrait ne fonctionne plus.</string>
 </resources>
