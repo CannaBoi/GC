@@ -879,7 +879,7 @@ Move device slowly"</string>
     <string name="pref_parameters_camera_5">Super High</string>
     <string name="pref_compress_jpeg_title">Image Quality</string>
     <string name="pref_compress_jpeg_summary">%s</string>
-    <string name="pref_compress_jpeg_default">100</string>
+    <string name="pref_compress_jpeg_default">95</string>
     <string name="pref_compress_jpeg_50">50%</string>
     <string name="pref_compress_jpeg_70">70%</string>
     <string name="pref_compress_jpeg_80">80%</string>
