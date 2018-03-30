@@ -658,9 +658,8 @@ Hou onderwerp in die middel."</string>
     <string name="setting_front_camera_photo">Voorste kamera se fotoresolusie</string>
     <string name="setting_front_camera_video">Voorste kamera se videoresolusie</string>
     <string name="setting_general">Algemeen</string>
-    <string name="setting_google_feedback">Stuur terugvoer</string>
-    <string name="setting_google_help">Hulp</string>
-    <string name="setting_google_help_and_feedback">Hulp en terugvoer</string>
+    <string name="pref_developer_title">Ontfouting en gereedskap</string>
+    <string name="pref_parameters_camera_title">HDR+ grense</string>
     <string name="setting_location">Ligging</string>
     <string name="setting_off">Af</string>
     <string name="setting_on">Aan</string>
@@ -763,8 +762,6 @@ Beweeg toestel stadig"</string>
     <string name="zoom_announcement">Zoemwaarde is %.1f</string>
     <string name="zoom_minus_desc">Zoem uit</string>
     <string name="zoom_plus_desc">Zoem in</string>
-    <string name="pref_developer_title">Ontfouting en gereedskap</string>
-    <string name="pref_parameters_camera_title">HDR+ grense</string>
     <string name="pref_parameters_camera_0">Standaard (laagste)</string>
     <string name="pref_parameters_camera_1">Lae</string>
     <string name="pref_parameters_camera_2">Medium</string>

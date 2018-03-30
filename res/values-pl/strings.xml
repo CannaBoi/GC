@@ -658,9 +658,8 @@ Utrzymuj obiekt w centrum kadru."</string>
     <string name="setting_front_camera_photo">Rozdzielczość zdjęcia: przedni aparat</string>
     <string name="setting_front_camera_video">Rozdzielczość filmu: przedni aparat</string>
     <string name="setting_general">Ogólne</string>
-    <string name="setting_google_feedback">Prześlij opinię</string>
-    <string name="setting_google_help">Pomoc</string>
-    <string name="setting_google_help_and_feedback">Pomoc i opinie</string>
+    <string name="pref_developer_title">Debugowanie i narzędzia</string>
+    <string name="pref_parameters_camera_title">Parametry HDR+</string>
     <string name="setting_location">Lokalizacja</string>
     <string name="setting_off">Wyłączono</string>
     <string name="setting_on">Włączono</string>
@@ -763,8 +762,6 @@ Poruszaj wolno aparatem"</string>
     <string name="zoom_announcement">Wartość powiększenia to %.1f</string>
     <string name="zoom_minus_desc">Pomniejsz</string>
     <string name="zoom_plus_desc">Powiększ</string>
-    <string name="pref_developer_title">Debugowanie i narzędzia</string>
-    <string name="pref_parameters_camera_title">Parametry HDR+</string>
     <string name="pref_parameters_camera_0">Domyślne (najniższe)</string>
     <string name="pref_parameters_camera_1">Niskie</string>
     <string name="pref_parameters_camera_2">Średnie</string>
@@ -784,7 +781,14 @@ Poruszaj wolno aparatem"</string>
     <string name="pref_enable_lowlight_title">Ulepszenie w słabym świetle</string>
     <string name="pref_enable_lowlight_summary">Usuwanie różowego/czerwonawego/magenta odcienia w słabym świetle</string>
     <string name="pref_enable_noise_title">Poprawiona ostrość</string>
+    <string name="pref_enable_noise_0">Domyślne</string>
+    <string name="pref_enable_noise_1">Niskie</string>
+    <string name="pref_enable_noise_2">Średnie</string>
     <string name="pref_enable_noise_summary">Poprawia ostrość ale zdjęcia są bardziej zaszumione. Zrestartuj aplikację, zmiany zostaną wprowadzone przy następnym uruchomieniu.</string>
     <string name="pref_enable_front_hdr_title">Wyłącz przedni HDR+</string>
     <string name="pref_enable_front_hdr_summary">Wyłączając przedni HDR+ tryb portretowy nie będzie dalej działał. Zrestartuj aplikację, zmiany zostaną wprowadzone przy następnym uruchomieniu.</string>
+    <string name="pref_hdrplus_settings_title">Ustawienia HDR+</string>
+    <string name="pref_misc_settings_title">Ustawienia</string>
+    <string name="pref_aemode_0">automatycznej</string>
+    <string name="pref_enable_aemode_title">Tryb automatycznej ekspozycji</string>
 </resources>

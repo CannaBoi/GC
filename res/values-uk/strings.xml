@@ -658,9 +658,8 @@
     <string name="setting_front_camera_photo">Роздільна здатність фото (передня камера)</string>
     <string name="setting_front_camera_video">Роздільна здатність відео (передня камера)</string>
     <string name="setting_general">Загальні налаштування</string>
-    <string name="setting_google_feedback">Надіслати відгук</string>
-    <string name="setting_google_help">Довідка</string>
-    <string name="setting_google_help_and_feedback">Довідка й відгуки</string>
+    <string name="pref_developer_title">Налагодження та інструменти</string>
+    <string name="pref_parameters_camera_title">Налаштування HDR+</string>
     <string name="setting_location">Геодані</string>
     <string name="setting_off">Вимкнено</string>
     <string name="setting_on">Увімкнено</string>
@@ -763,8 +762,6 @@
     <string name="zoom_announcement">Масштаб: %.1f</string>
     <string name="zoom_minus_desc">Віддалити</string>
     <string name="zoom_plus_desc">Наблизити</string>
-    <string name="pref_developer_title">Налагодження та інструменти</string>
-    <string name="pref_parameters_camera_title">Налаштування HDR+</string>
     <string name="pref_parameters_camera_0">Найменший</string>
     <string name="pref_parameters_camera_1">Низький</string>
     <string name="pref_parameters_camera_2">Середній</string>
@@ -784,7 +781,13 @@
     <string name="pref_enable_lowlight_title">Поліпшення при слабому освітленні</string>
     <string name="pref_enable_lowlight_summary">Видалити відтінки кольорів при слабому освітленні</string>
     <string name="pref_enable_noise_title">Поліпшення резкості</string>
+    <string name="pref_enable_noise_0">Найменший</string>
+    <string name="pref_enable_noise_1">Низький</string>
+    <string name="pref_enable_noise_2">Середній</string>
     <string name="pref_enable_noise_summary">Поліпшується різкість але збільшуються шуми. Перезапустіть програму щоб побачити зміни</string>
     <string name="pref_enable_front_hdr_title">Вимкнути HDR+ на фронтальній камері</string>
     <string name="pref_enable_front_hdr_summary">Відключення режиму HDR+ вимикає портретну з`йомку. Перезапустіть програму щоб побачити зміни</string>
+    <string name="pref_hdrplus_settings_title">Налаштування HDR+</string>
+    <string name="pref_misc_settings_title">Інші налаштування</string>
+    <string name="pref_enable_aemode_title">Режим автоекспозиції</string>
 </resources>

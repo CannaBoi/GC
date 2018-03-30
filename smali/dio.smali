@@ -117,11 +117,18 @@
 
     const/4 v5, 0x2
 
+    sget v0, Lcok;->sHDRen:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v5, 0x0
+
+    :cond_0
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget-object v0, p0, Ldio;->c:Ldig;
 
@@ -133,7 +140,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     move v0, v1
 
@@ -146,7 +153,7 @@
 
     move-result v6
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     move v3, v4
 
@@ -189,12 +196,12 @@
 
     return-object v1
 
-    :cond_0
+    :cond_1
     move v0, v2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     move v3, v5
 
     goto :goto_1
@@ -206,7 +213,7 @@
     :try_start_0
     iget-object v0, p1, Lgdp;->a:Lici;
 
-    const/16 v1, 0x23
+    const/16 v1, 0x25
 
     invoke-static {p0, v0, v1}, Lgkp;->a(Lgdq;Lici;I)Lgkp;
     :try_end_0
@@ -385,19 +392,9 @@
 
     invoke-interface {v0}, Licz;->a()V
 
-    iget-object v0, p0, Ldio;->e:Lgzz;
+    iget-object v0, p0, Ldio;->d:Lbhn;
 
-    invoke-virtual {v0}, Lgzz;->i()Z
-
-    move-result v0
-
-    goto/16 :goto_1
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ldio;->g:Lbip;
-
-    invoke-virtual {v0}, Lbip;->h()Z
+    invoke-virtual {v0}, Lbhn;->setpaemode()I
 
     move-result v0
 
@@ -405,11 +402,38 @@
 
     iget-object v0, p0, Ldio;->d:Lbhn;
 
+    invoke-virtual {v0}, Lbhn;->setaemode()I
+
+    move-result v0
+
+    :cond_0
+    sput v0, Lcok;->sAEMode:I
+
+    iget-object v0, p0, Ldio;->e:Lgzz;
+
+    invoke-virtual {v0}, Lgzz;->c()Z
+
+    move-result v0
+
+    goto/16 :goto_1
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Ldio;->g:Lbip;
+
+    invoke-virtual {v0}, Lbip;->h()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Ldio;->d:Lbhn;
+
     invoke-virtual {v0}, Lbhn;->d()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     sget-object v0, Ldij;->e:Ldij;
 
@@ -417,7 +441,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-interface {p2}, Lgdq;->b()Lige;
 
@@ -425,7 +449,7 @@
 
     sget-object v3, Lige;->b:Lige;
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v3, :cond_1
 
     sget-object v0, Ldio;->a:Ljava/lang/String;
 
@@ -476,14 +500,14 @@
     :goto_0
     return-object v0
 
-    :cond_0
+    :cond_1
     iget-object v0, p0, Ldio;->e:Lgzz;
 
-    invoke-virtual {v0}, Lgzz;->i()Z
+    invoke-virtual {v0}, Lgzz;->c()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Ldio;->g:Lbip;
 
@@ -491,7 +515,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-interface {p2}, Lgdq;->b()Lige;
 
@@ -499,24 +523,16 @@
 
     sget-object v3, Lige;->a:Lige;
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v3, :cond_3
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Ldio;->d:Lbhn;
 
     invoke-virtual {v0}, Lbhn;->d()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    sget-object v0, Ldij;->e:Ldij;
-
-    invoke-virtual {v1, v0}, Ldij;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     :goto_1
     sget-object v0, Ldio;->a:Ljava/lang/String;
@@ -541,7 +557,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     sget-object v0, Ldio;->a:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

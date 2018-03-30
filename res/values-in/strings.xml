@@ -659,9 +659,8 @@ Subjek tetap di tengah."</string>
     <string name="setting_front_camera_photo">Resolusi foto kamera depan</string>
     <string name="setting_front_camera_video">Resolusi video kamera depan</string>
     <string name="setting_general">Umum</string>
-    <string name="setting_google_feedback">Kirim masukan</string>
-    <string name="setting_google_help">Bantuan</string>
-    <string name="setting_google_help_and_feedback">Bantuan &amp; masukan</string>
+    <string name="pref_developer_title">Debugging dan Peralatan</string>
+    <string name="pref_parameters_camera_title">Pengaturan HDR+</string>
     <string name="setting_location">Lokasi</string>
     <string name="setting_off">Nonaktif</string>
     <string name="setting_on">Aktif</string>
@@ -764,8 +763,6 @@ Gerakkan pelan"</string>
     <string name="zoom_announcement">Tingkat zoom %.1f</string>
     <string name="zoom_minus_desc">Perkecil</string>
     <string name="zoom_plus_desc">Perbesar</string>
-    <string name="pref_developer_title">Debugging dan Peralatan</string>
-    <string name="pref_parameters_camera_title">Pengaturan HDR+</string>
     <string name="pref_parameters_camera_0">Setelan Awal (paling rendah)</string>
     <string name="pref_parameters_camera_1">Rendah</string>
     <string name="pref_parameters_camera_2">Sedang</string>
@@ -784,4 +781,11 @@ Gerakkan pelan"</string>
     <string name="pref_config_camera_title">Pengaturan Kamera HDR+</string>
     <string name="pref_enable_lowlight_title">Perbaikan di kondisi pencahayaan kurang.</string>
     <string name="pref_enable_lowlight_summary">Hilangkan rona merah muda/kemerahan/magenta di kondisi pencahayaan kurang.</string>
+    <string name="pref_enable_noise_title">Tingkatkan ketajaman</string>
+    <string name="pref_enable_noise_summary">"Ketajaman meningkat tetapi 'noise' bertambah"</string>
+    <string name="pref_enable_front_hdr_title">Matikan HDR+ kamera depan</string>
+    <string name="pref_enable_front_hdr_summary">Jika HDR+ kamera depan dimatikan, mode potret tidak bisa digunakan.</string>
+    <string name="setting_google_feedback">Kirim masukan</string>
+    <string name="setting_google_help">Bantuan</string>
+    <string name="setting_google_help_and_feedback">Bantuan &amp; masukan</string>
 </resources>

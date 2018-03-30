@@ -1053,7 +1053,7 @@
 
     move-result-object v2
 
-    check-cast v2, Landroid/preference/PreferenceScreen;
+    check-cast v2, Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1075,23 +1075,23 @@
 
     invoke-virtual {v2, v3}, Lhzr;->a(Lich;)Lich;
 
-    const-string v2, "pref_category_advanced"
+    const-string v2, "pref_category_misc"
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    check-cast v2, Landroid/preference/PreferenceScreen;
+    check-cast v2, Landroid/preference/PreferenceCategory;
 
     iget-object v3, p0, Leqh;->c:Lgzz;
 
-    invoke-virtual {v3}, Lgzz;->i()Z
+    invoke-virtual {v3}, Lgzz;->j()Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-nez v3, :cond_1
 
-    const-string v3, "pref_camera_dirty_lens_key"
+    const-string v3, "pref_enable_front_hdr_key"
 
     invoke-virtual {p0, v3}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 

@@ -7,6 +7,8 @@
 
 
 # instance fields
+.field public BadTF:I
+
 .field public final a:I
 
 .field public final b:Licu;
@@ -30,7 +32,7 @@
 
 # direct methods
 .method public constructor <init>(Licv;Licz;Lggn;)V
-    .locals 3
+    .locals 2
 
     const/4 v1, 0x0
 
@@ -56,21 +58,7 @@
 
     iput v1, p0, Lggg;->e:I
 
-    invoke-virtual {p0}, Lggg;->b()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/16 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
     const/16 v0, 0x78
-
-    :goto_0
-    const/4 v1, 0x0
 
     iput v0, p0, Lggg;->a:I
 
@@ -80,11 +68,79 @@
 
     iput v1, p0, Lggg;->f:I
 
+    invoke-virtual {p0}, Lggg;->BadTF()I
+
+    move-result v1
+
+    iput v1, p0, Lggg;->BadTF:I
+
     return-void
 .end method
 
 
 # virtual methods
+.method public BadTF()I
+    .locals 3
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "potter"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v1, "chiron"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, -0x1
+
+    :goto_0
+    return v2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_0
+.end method
+
 .method final a()V
     .locals 3
 
@@ -439,79 +495,4 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "lithium"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "chiron"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "sagit"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "potter"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "OnePlus5T"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v0, "OnePlus5"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

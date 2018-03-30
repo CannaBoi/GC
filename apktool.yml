@@ -1,9 +1,8 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: GoogleCamera-Pixel2Mod-Arnova8G2-V6.apk
+apkFileName: GoogleCamera-Pixel2Mod-Arnova8G2-V7beta-test-9.apk
 compressionType: false
 doNotCompress:
 - arsc
-- apk
 - assets/com.google.android.vision.face/models/classification/frontal_face_classifiers.4/is_left_eye_open-y0.12-wmd.bin
 - assets/com.google.android.vision.face/models/classification/frontal_face_classifiers.4/is_right_eye_open-y0.12-wmd.bin
 - assets/com.google.android.vision.face/models/classification/frontal_face_classifiers.4/is_smiling-y0.5-wmd.bin
@@ -38,5 +37,5 @@ usesFramework:
   tag: null
 version: 2.3.0
 versionInfo:
-  versionCode: '41362666'
-  versionName: 5.1.018.177470874
+  versionCode: '41364271'
+  versionName: 5.1.018.177624777.7.beta9

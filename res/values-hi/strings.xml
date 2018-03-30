@@ -658,9 +658,8 @@
     <string name="setting_front_camera_photo">सामने वाले कैमरे का फ़ोटो रिज़ॉल्यूशन</string>
     <string name="setting_front_camera_video">सामने वाले कैमरे का वीडियो रिज़ॉल्यूशन</string>
     <string name="setting_general">सामान्य</string>
-    <string name="setting_google_feedback">फ़ीडबैक भेजें</string>
-    <string name="setting_google_help">सहायता</string>
-    <string name="setting_google_help_and_feedback">सहायता और फ़ीडबैक</string>
+    <string name="pref_developer_title">डिबगिंग और टूल्स</string>
+    <string name="pref_parameters_camera_title">HDR+ पैरामीटर</string>
     <string name="setting_location">स्थान</string>
     <string name="setting_off">बंद</string>
     <string name="setting_on">चालू</string>
@@ -763,8 +762,6 @@
     <string name="zoom_announcement">%.1f ज़ूम किया गया है</string>
     <string name="zoom_minus_desc">ज़ूम घटाएं</string>
     <string name="zoom_plus_desc">ज़ूम बढ़ाएं</string>
-    <string name="pref_developer_title">डिबगिंग और टूल्स</string>
-    <string name="pref_parameters_camera_title">HDR+ पैरामीटर</string>
     <string name="pref_parameters_camera_0">डिफ़ॉल्ट (सबसे कम)</string>
     <string name="pref_parameters_camera_1">कम</string>
     <string name="pref_parameters_camera_2">मध्यम</string>
@@ -783,4 +780,7 @@
     <string name="pref_config_camera_title">कॉन्फ़िग कैमरा HDR+</string>
     <string name="pref_enable_lowlight_title">कम रोशनी में सुधार</string>
     <string name="pref_enable_lowlight_summary">कम रोशनी में गुलाबी / लाल / मैजंटा रंग हटाना</string>
+    <string name="setting_google_feedback">फ़ीडबैक भेजें</string>
+    <string name="setting_google_help">सहायता</string>
+    <string name="setting_google_help_and_feedback">सहायता और फ़ीडबैक</string>
 </resources>

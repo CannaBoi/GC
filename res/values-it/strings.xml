@@ -659,9 +659,8 @@ tenendo il soggetto al centro."</string>
     <string name="setting_front_camera_photo">Risoluzione foto fotocamera anteriore</string>
     <string name="setting_front_camera_video">Risoluzione video fotocamera anteriore</string>
     <string name="setting_general">Generali</string>
-    <string name="setting_google_feedback">Invia feedback</string>
-    <string name="setting_google_help">Guida</string>
-    <string name="setting_google_help_and_feedback">Guida e feedback</string>
+    <string name="pref_developer_title">Debugging e strumenti</string>
+    <string name="pref_parameters_camera_title">Parametri HDR+</string>
     <string name="setting_location">Posizione</string>
     <string name="setting_off">OFF</string>
     <string name="setting_on">On</string>
@@ -764,8 +763,6 @@ Muovi disp. lentam."</string>
     <string name="zoom_announcement">Il valore di zoom è %.1f</string>
     <string name="zoom_minus_desc">Diminuisci lo zoom</string>
     <string name="zoom_plus_desc">Aumenta lo zoom</string>
-    <string name="pref_developer_title">Debugging e strumenti</string>
-    <string name="pref_parameters_camera_title">Parametri HDR+</string>
     <string name="pref_parameters_camera_0">Predefinito (molto basso)</string>
     <string name="pref_parameters_camera_1">Basso</string>
     <string name="pref_parameters_camera_2">Medio</string>
@@ -788,4 +785,8 @@ Muovi disp. lentam."</string>
     <string name="pref_enable_noise_summary">"Migliora la nitidezza, ma le foto hanno più rumore. Riavvia l'app, i cambiamenti avranno effetto al prossimo avvio."</string>
     <string name="pref_enable_front_hdr_title">Disabilita HDR+ frontale</string>
     <string name="pref_enable_front_hdr_summary">"Disabilitando l'HDR+ frontale la Modalità Ritratto non funzionerà più. Riavvia l'app, i cambiamenti avranno effetto al prossimo avvio."</string>
+    <string name="setting_google_feedback">Invia feedback</string>
+    <string name="setting_google_help">Guida</string>
+    <string name="setting_google_help_and_feedback">Guida e feedback</string>
+    <string name="pref_enable_aemode_title">Modalità di esposizione automatica</string>
 </resources>

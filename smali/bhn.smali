@@ -3,6 +3,10 @@
 .source "PG"
 
 
+# static fields
+.field private static e:Landroid/content/SharedPreferences;
+
+
 # instance fields
 .field public final a:Landroid/content/ContentResolver;
 
@@ -24,6 +28,8 @@
     iput-object p2, p0, Lbhn;->b:Lgzz;
 
     iput-object p3, p0, Lbhn;->d:Landroid/content/SharedPreferences;
+
+    sput-object p3, Lbhn;->e:Landroid/content/SharedPreferences;
 
     new-instance v0, Lbhq;
 
@@ -52,6 +58,50 @@
     iput-boolean v1, v0, Lihk;->n:Z
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/String;)I
+    .locals 2
+
+    sget-object v0, Lbhn;->e:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lbhn;->e:Landroid/content/SharedPreferences;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, p0, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static t()I
+    .locals 1
+
+    const-string/jumbo v0, "pref_disable_zoom_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 
@@ -639,10 +689,22 @@
     return v0
 .end method
 
-.method public t()I
+.method public setaemode()I
     .locals 1
 
-    const-string v0, "pref_enable_aemode_key"
+    const-string v0, "pref_aemode_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setpaemode()I
+    .locals 1
+
+    const-string v0, "pref_paemode_key"
 
     invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
 

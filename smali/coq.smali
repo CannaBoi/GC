@@ -727,7 +727,7 @@
 
     if-eqz v2, :cond_5
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     move-object/from16 v0, v22
 
@@ -813,16 +813,6 @@
 
     :goto_6
     move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcoq;->b:Lcpb;
-
-    iget-object v2, v2, Lcpb;->B:Lbhn;
-
-    invoke-virtual {v2}, Lbhn;->t()I
-
-    move-result v2
-
-    sput v2, Lcok;->j:I
 
     iget-object v2, v0, Lcoq;->i:Lgdq;
 
@@ -2029,29 +2019,9 @@
 
     move-result v5
 
-    move-object/from16 v6, p6
-
-    iget-object v0, p0, Lcoq;->b:Lcpb;
-
-    iget-object v0, v0, Lcpb;->B:Lbhn;
-
-    invoke-virtual {v0}, Lbhn;->p()I
-
-    move-result v0
-
-    sput v0, Lcok;->i:I
-
-    iget-object v0, p0, Lcoq;->b:Lcpb;
-
-    iget-object v0, v0, Lcpb;->B:Lbhn;
-
-    invoke-virtual {v0}, Lbhn;->t()I
-
-    move-result v0
-
-    sput v0, Lcok;->j:I
-
     move-object v0, p3
+
+    move-object/from16 v6, p6
 
     invoke-static/range {v0 .. v7}, Lcok;->a(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
 

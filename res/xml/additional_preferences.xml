@@ -2,8 +2,8 @@
 <PreferenceCategory android:title="@string/pref_category_about" android:key="_pref_category_about"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/pref_category_about" android:key="pref_category_about">
-        <PreferenceScreen android:title="GoogleCamera-Pixel2Mod-Arnova8G2" android:summary="Version 6">
-            <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS" android:data="package:com.google.android.GoogleCamera" />
+        <PreferenceScreen android:title="GoogleCamera-Pixel2Mod-Arnova8G2" android:summary="Version 7">
+            <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS" android:data="package:com.google.android.Pixel2Mod" />
         </PreferenceScreen>
         <PreferenceScreen android:title="Google Camera">
             <intent android:action="android.intent.action.VIEW" android:data="https://support.google.com/googlecamera/?hl=en-GB#topic=6164365" />
