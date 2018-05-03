@@ -467,13 +467,9 @@
 
     move-result v3
 
-    const/16 v3, 0x1200
-
     invoke-interface {p0}, Liil;->c()I
 
     move-result v4
-
-    const/16 v4, 0xd80
 
     const/4 v5, 0x0
 

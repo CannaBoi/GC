@@ -292,7 +292,7 @@
 .end method
 
 .method private final a(Lici;FLcom/google/googlex/gcam/AeResults;)Lcom/google/googlex/gcam/AeShotParams;
-    .locals 3
+    .locals 5
 
     const/4 v2, 0x1
 
@@ -324,16 +324,46 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/AeShotParams;->setProcess_bayer_for_payload(Z)V
 
+    const/16 v4, 0x64
+
+    iget-object v1, p0, Lcoq;->k:Lici;
+
+    iget v1, v1, Lici;->a:I
+
+    iget-object v3, p0, Lcoq;->l:Lici;
+
+    iget v3, v3, Lici;->a:I
+
+    sub-int v3, v1, v3
+
+    if-lt v3, v4, :cond_1
+
     iget-object v1, p0, Lcoq;->l:Lici;
 
     iget v1, v1, Lici;->a:I
 
+    :cond_1
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_width(I)V
+
+    const/16 v4, 0x64
+
+    iget-object v1, p0, Lcoq;->k:Lici;
+
+    iget v1, v1, Lici;->b:I
+
+    iget-object v3, p0, Lcoq;->l:Lici;
+
+    iget v3, v3, Lici;->b:I
+
+    sub-int v3, v1, v3
+
+    if-lt v3, v4, :cond_2
 
     iget-object v1, p0, Lcoq;->l:Lici;
 
     iget v1, v1, Lici;->b:I
 
+    :cond_2
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_height(I)V
 
     goto :goto_0
@@ -653,21 +683,21 @@
 
     move-result v4
 
-    const/4 v2, 0x0
+    const/4 v8, 0x0
 
-    if-eq v4, v2, :cond_10
+    if-eq v4, v8, :cond_10
 
-    const/4 v2, 0x1
+    const/4 v8, 0x1
 
-    if-eq v4, v2, :cond_11
+    if-eq v4, v8, :cond_11
 
-    const/4 v2, 0x2
+    const/4 v8, 0x2
 
-    if-eq v4, v2, :cond_12
+    if-eq v4, v8, :cond_12
 
-    const/4 v2, 0x3
+    const/4 v8, 0x3
 
-    if-eq v4, v2, :cond_13
+    if-eq v4, v8, :cond_13
 
     goto :goto_2
 

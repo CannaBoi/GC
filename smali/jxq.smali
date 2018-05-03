@@ -1,213 +1,81 @@
 .class public Ljxq;
-.super Ljxo;
+.super Ljava/lang/Object;
 .source "PG"
+
+# interfaces
+.implements Ljava/lang/reflect/InvocationHandler;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Ljxp;->setMotionVectorCallbackEnabled(Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Ljxp;
 
 
 # direct methods
-.method public constructor <init>(FFFIIJJ)V
+.method constructor <init>(Ljxp;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p9}, Ljxo;-><init>(FFFIIJJ)V
+    iput-object p1, p0, Ljxq;->a:Ljxp;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 8
+.method public invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
 
-    const-wide v6, 0x412e848000000000L    # 1000000.0
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    iget-wide v2, p0, Ljxq;->h:D
+    move-result-object v2
 
-    iget-wide v4, p0, Ljxq;->j:D
+    const-string v3, "onMotionVector"
 
-    sub-double/2addr v2, v4
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-wide v4, 0x4014000000000000L    # 5.0
+    move-result v2
 
-    cmpl-double v2, v2, v4
+    if-eqz v2, :cond_0
 
-    if-lez v2, :cond_1
+    const/4 v2, 0x0
 
-    iget-wide v2, p0, Ljxq;->g:D
+    aget-object v2, p3, v2
 
-    iget-wide v4, p0, Ljxq;->h:D
+    check-cast v2, [[Landroid/graphics/PointF;
 
-    mul-double v0, v2, v4
+    move-object v1, v2
 
-    iget-wide v2, p0, Ljxq;->j:D
+    check-cast v1, [[Landroid/graphics/PointF;
 
-    div-double v2, v0, v2
+    const/4 v2, 0x1
 
-    iget-wide v4, p0, Ljxq;->e:D
+    aget-object v0, p3, v2
 
-    cmpl-double v2, v2, v4
+    check-cast v0, Landroid/hardware/Camera;
 
-    if-lez v2, :cond_0
+    iget-object v2, p0, Ljxq;->a:Ljxp;
 
-    iget-wide v2, p0, Ljxq;->e:D
-
-    mul-double/2addr v2, v6
-
-    double-to-long v2, v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    iget-wide v2, p0, Ljxq;->e:D
-
-    div-double v2, v0, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v2
-
-    long-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    :goto_0
-    return-void
+    invoke-static {v2, v1, v0}, Ljxp;->a(Ljxp;[[Landroid/graphics/PointF;Landroid/hardware/Camera;)V
 
     :cond_0
-    iget-wide v2, p0, Ljxq;->j:D
+    const/4 v2, 0x0
 
-    div-double v2, v0, v2
-
-    mul-double/2addr v2, v6
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    iget-wide v2, p0, Ljxq;->j:D
-
-    double-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    goto :goto_0
-
-    :cond_1
-    iget-wide v2, p0, Ljxq;->h:D
-
-    double-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    iget-wide v2, p0, Ljxq;->g:D
-
-    mul-double/2addr v2, v6
-
-    double-to-long v2, v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    goto :goto_0
-.end method
-
-.method public d()V
-    .locals 8
-
-    const-wide v6, 0x412e848000000000L    # 1000000.0
-
-    iget-wide v2, p0, Ljxq;->g:D
-
-    iget-wide v4, p0, Ljxq;->j:D
-
-    add-double/2addr v4, v4
-
-    sub-double/2addr v2, v4
-
-    const-wide v4, 0x0
-
-    cmpl-double v2, v2, v4
-
-    if-lez v2, :cond_1
-
-    iget-wide v2, p0, Ljxq;->g:D
-
-    iget-wide v4, p0, Ljxq;->g:D
-
-    mul-double v0, v2, v4
-
-    iget-wide v2, p0, Ljxq;->j:D
-
-    add-double/2addr v2, v2
-
-    div-double v2, v0, v2
-
-    iget-wide v4, p0, Ljxq;->e:D
-
-    cmpl-double v2, v2, v4
-
-    if-lez v2, :cond_0
-
-    iget-wide v2, p0, Ljxq;->e:D
-
-    mul-double/2addr v2, v6
-
-    double-to-long v2, v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    iget-wide v2, p0, Ljxq;->e:D
-
-    div-double v2, v0, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v2
-
-    long-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-wide v2, p0, Ljxq;->j:D
-
-    add-double/2addr v2, v2
-
-    div-double v2, v0, v2
-
-    mul-double/2addr v2, v6
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    iget-wide v2, p0, Ljxq;->j:D
-
-    add-double/2addr v2, v2
-
-    double-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    goto :goto_0
-
-    :cond_1
-    iget-wide v2, p0, Ljxq;->g:D
-
-    double-to-int v2, v2
-
-    iput v2, p0, Ljxq;->b:I
-
-    iget-wide v2, p0, Ljxq;->g:D
-
-    mul-double/2addr v2, v6
-
-    double-to-long v2, v2
-
-    iput-wide v2, p0, Ljxq;->a:J
-
-    goto :goto_0
+    return-object v2
 .end method

@@ -1,10 +1,10 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android)
-SHA-256-Digest-Manifest: 5k2RKybWZ9pgcCAMKy9Q9oDV1ItJGXRZCDr56SvPYr4=
+SHA-256-Digest-Manifest: qQFiuCYIH7NlKUw1Fyto2R9qEyTw1e+LgMoLxn4QxM0=
 X-Android-APK-Signed: 2
 
 Name: AndroidManifest.xml
-SHA-256-Digest: 4NLB7PzETF78kdMT6s0tPY7GybGmJOZtVz2ie2z6/q8=
+SHA-256-Digest: qtUCKhAbq44dZ/t2fdqummj9VlBgPGZ4a2YBgiVm7vQ=
 
 Name: assets/camera_wear_app_PixelSystemRelease.apk
 SHA-256-Digest: uLaDJ+3176yzEsSehbJCT/WPiGwzZAWOXNgCU5z+dFU=
@@ -95,7 +95,7 @@ Name: build-data.properties
 SHA-256-Digest: J7u+GB1ngjFSGT0HvUhLX9roydx2naMg3MaqjN1ilg8=
 
 Name: classes.dex
-SHA-256-Digest: aRy86X9utZfrQ9kbZ1DKCpD5QXUfescuQObQP5JiZms=
+SHA-256-Digest: BX27PML7M4wQJKEHR3FVjTS62G2iT7dfDXRcGip91AQ=
 
 Name: lib/arm64-v8a/libAndroidJniUtilsJni.so
 SHA-256-Digest: y9SaVls6tbVXWmrjUj799Krf1nLaPwnByJbRaU2u30c=
@@ -144,6 +144,15 @@ SHA-256-Digest: fGVM7AGhjy4Mgc/tmza53+6qwIeLDcI40sQ2nO5pVnI=
 
 Name: lib/arm64-v8a/libnativehelper_compat_libc++.so
 SHA-256-Digest: GC4Cif+aKzmsudj4jhoDdt0IneoeJ942Hi0eExdikAQ=
+
+Name: lib/arm64-v8a/libopbaselib.so
+SHA-256-Digest: Fc9s1IIC1kC06mYV6XgKP7Hw81+qGbbckC8IrH621vM=
+
+Name: lib/arm64-v8a/libopcamera.so
+SHA-256-Digest: M0M5xHyT0F9keVSL5hHsk+NFoX7gNiiPU0oZUKyPL8U=
+
+Name: lib/arm64-v8a/libopcameralib.so
+SHA-256-Digest: 5wiNnuqOIopzL2vrSx/7B+8S8zZ9ngMuqpAS+Rcj/8Q=
 
 Name: lib/arm64-v8a/librefocus.so
 SHA-256-Digest: wFzHCdEJ1UpySZSaS/3LQzBNPGau9VHULOp0wXCykY4=
@@ -3866,5 +3875,5 @@ Name: res/xml/wearable_description.xml
 SHA-256-Digest: qIl57LL+6B+MBYkApgxFS4GKBICcATxgHG/K/kk67Zc=
 
 Name: resources.arsc
-SHA-256-Digest: iyC98rfI7HdGJu7H8Dy21XoestMvkkQtSQMM2UN2A/o=
+SHA-256-Digest: e0BGQkGRTqgVe17gNY6z5r5U4hs4gDXz48uVbWpahNk=
 

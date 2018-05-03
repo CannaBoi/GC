@@ -1437,15 +1437,15 @@
 
     move-result-object v2
 
-    check-cast v2, Landroid/preference/PreferenceScreen;
+    check-cast v2, Landroid/preference/PreferenceCategory;
 
     const-string v3, "pref_smartburst_classicburst"
 
-    invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v2, v3}, Landroid/preference/PreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    invoke-virtual {v2, v3}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     goto/16 :goto_1
 

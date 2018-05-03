@@ -1,105 +1,129 @@
-.class public abstract Ljxo;
+.class public Ljxo;
 .super Ljava/lang/Object;
 .source "PG"
 
+# interfaces
+.implements Ljava/lang/Cloneable;
+
 
 # instance fields
-.field protected a:J
+.field private final m_Data:[B
 
-.field protected b:I
+.field private final m_PixelStride:I
 
-.field protected final c:D
-
-.field protected final d:D
-
-.field protected final e:D
-
-.field protected final f:D
-
-.field protected final g:D
-
-.field protected final h:D
-
-.field protected final i:D
-
-.field protected final j:D
+.field private final m_RowStride:I
 
 
 # direct methods
-.method public constructor <init>(FFFIIJJ)V
-    .locals 4
-
-    const-wide v2, 0x412e848000000000L    # 1000000.0
+.method public constructor <init>(Landroid/media/Image$Plane;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    float-to-double v0, p1
+    invoke-virtual {p1}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
-    iput-wide v0, p0, Ljxo;->d:D
+    move-result-object v0
 
-    float-to-double v0, p2
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->capacity()I
 
-    iput-wide v0, p0, Ljxo;->c:D
+    move-result v1
 
-    float-to-double v0, p3
+    new-array v1, v1, [B
 
-    iput-wide v0, p0, Ljxo;->g:D
+    iput-object v1, p0, Ljxo;->m_Data:[B
 
-    int-to-double v0, p4
+    invoke-virtual {p1}, Landroid/media/Image$Plane;->getPixelStride()I
 
-    iput-wide v0, p0, Ljxo;->j:D
+    move-result v1
 
-    int-to-double v0, p5
+    iput v1, p0, Ljxo;->m_PixelStride:I
 
-    iput-wide v0, p0, Ljxo;->i:D
+    invoke-virtual {p1}, Landroid/media/Image$Plane;->getRowStride()I
 
-    long-to-double v0, p6
+    move-result v1
 
-    div-double/2addr v0, v2
+    iput v1, p0, Ljxo;->m_RowStride:I
 
-    iput-wide v0, p0, Ljxo;->f:D
+    iget-object v1, p0, Ljxo;->m_Data:[B
 
-    long-to-double v0, p8
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    div-double/2addr v0, v2
+    return-void
+.end method
 
-    iput-wide v0, p0, Ljxo;->e:D
+.method public constructor <init>([BII)V
+    .locals 0
 
-    iget-wide v0, p0, Ljxo;->d:D
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v2, p0, Ljxo;->c:D
+    iput-object p1, p0, Ljxo;->m_Data:[B
 
-    mul-double/2addr v0, v2
+    iput p2, p0, Ljxo;->m_PixelStride:I
 
-    iget-wide v2, p0, Ljxo;->j:D
-
-    mul-double/2addr v0, v2
-
-    iput-wide v0, p0, Ljxo;->h:D
+    iput p3, p0, Ljxo;->m_RowStride:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()V
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Ljxo;->clone()Ljxo;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public b()J
-    .locals 2
+.method public clone()Ljxo;
+    .locals 4
 
-    iget-wide v0, p0, Ljxo;->a:J
+    new-instance v1, Ljxo;
 
-    return-wide v0
+    iget-object v0, p0, Ljxo;->m_Data:[B
+
+    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    iget v2, p0, Ljxo;->m_PixelStride:I
+
+    iget v3, p0, Ljxo;->m_RowStride:I
+
+    invoke-direct {v1, v0, v2, v3}, Ljxo;-><init>([BII)V
+
+    return-object v1
 .end method
 
-.method public c()I
+.method public final getData()[B
     .locals 1
 
-    iget v0, p0, Ljxo;->b:I
+    iget-object v0, p0, Ljxo;->m_Data:[B
+
+    return-object v0
+.end method
+
+.method public final getPixelStride()I
+    .locals 1
+
+    iget v0, p0, Ljxo;->m_PixelStride:I
 
     return v0
 .end method
 
-.method public abstract d()V
+.method public final getRowStride()I
+    .locals 1
+
+    iget v0, p0, Ljxo;->m_RowStride:I
+
+    return v0
 .end method

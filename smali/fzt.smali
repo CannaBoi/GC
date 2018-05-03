@@ -15,9 +15,9 @@
 
     new-instance v0, Lici;
 
-    const/16 v1, 0x400
+    const/16 v1, 0x280
 
-    const/16 v2, 0x300
+    const/16 v2, 0x1e0
 
     invoke-direct {v0, v1, v2}, Lici;-><init>(II)V
 

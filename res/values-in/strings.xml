@@ -785,6 +785,9 @@ Gerakkan pelan"</string>
     <string name="pref_enable_noise_summary">"Ketajaman meningkat tetapi 'noise' bertambah"</string>
     <string name="pref_enable_front_hdr_title">Matikan HDR+ kamera depan</string>
     <string name="pref_enable_front_hdr_summary">Jika HDR+ kamera depan dimatikan, mode potret tidak bisa digunakan.</string>
+    <string name="pref_hdrplus_settings_title">pengaturan HDR+</string>
+    <string name="pref_misc_settings_title">pengaturan lain - lain</string>
+    <string name="pref_disable_zoom_title">Nonaktifkan zoom dalam mode potret</string>
     <string name="setting_google_feedback">Kirim masukan</string>
     <string name="setting_google_help">Bantuan</string>
     <string name="setting_google_help_and_feedback">Bantuan &amp; masukan</string>

@@ -15,7 +15,7 @@
 
 .field private d:Lhda;
 
-.field private gotAF:I
+.field private e:I
 
 
 # direct methods
@@ -45,7 +45,7 @@
     :cond_0
     const/4 v3, 0x1
 
-    iput v3, p0, Lato;->gotAF:I
+    iput v3, p0, Lato;->e:I
 
     invoke-static {v3}, Liya;->a(Z)V
 
@@ -165,7 +165,7 @@
     :cond_2
     const/4 v3, 0x0
 
-    iput v3, p0, Lato;->gotAF:I
+    iput v3, p0, Lato;->e:I
 
     return-void
 .end method
@@ -189,7 +189,7 @@
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    iget v0, p0, Lato;->gotAF:I
+    iget v0, p0, Lato;->e:I
 
     if-eqz v0, :cond_0
 

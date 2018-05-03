@@ -790,8 +790,9 @@ Redémarrez l'application, les modifications prendront effet au prochain démarr
     <string name="pref_enable_front_hdr_summary">"En désactivant HDR+ pour la caméra frontale le mode portrait ne fonctionne plus. Relancer l'application"</string>
     <string name="pref_hdrplus_settings_title">Paramètres HDR+</string>
     <string name="pref_misc_settings_title">Paramètres divers</string>
+    <string name="pref_aemode">"Mode d'exposition automatique"</string>
+    <string name="pref_disable_zoom_title">Désactiver le zoom pour mode portrait</string>
     <string name="setting_google_feedback">Envoyer des commentaires</string>
     <string name="setting_google_help">Aide</string>
     <string name="setting_google_help_and_feedback">Aide et commentaires</string>
-    <string name="pref_enable_aemode_title">"Mode d'exposition automatique"</string>
 </resources>

@@ -39,6 +39,8 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    if-eqz v0, :cond_2
+
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -101,6 +103,8 @@
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_2
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 

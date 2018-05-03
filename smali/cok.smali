@@ -884,7 +884,7 @@
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_b
+    if-ne v2, v3, :cond_9
 
     const/4 v2, 0x0
 
@@ -988,44 +988,21 @@
 
     move-result v2
 
+    sget-object v10, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v9, "potter"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_a
+
     sget v9, Lcok;->h:I
 
-    if-nez v9, :cond_1
-
-    sget-object v9, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v10, "potter"
-
-    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
+    if-nez v9, :cond_a
 
     const/16 v4, 0x6e
-
-    int-to-float v5, v4
-
-    int-to-float v3, v3
-
-    div-float v3, v5, v3
-
-    int-to-float v2, v2
-
-    int-to-float v4, v4
-
-    div-float/2addr v2, v4
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static {v2, v4}, Ljava/lang/Math;->max(FF)F
-
-    move-result v2
-
-    goto/16 :goto_1
-
-    :cond_1
-    if-le v2, v4, :cond_c
 
     int-to-float v5, v4
 
@@ -1048,7 +1025,7 @@
     :goto_1
     sget-boolean v4, Lcok;->b:Z
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
     sget-object v4, Lcok;->a:Ljava/lang/String;
 
@@ -1084,7 +1061,7 @@
 
     invoke-static {v4, v5}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
+    :cond_1
     const/4 v4, 0x2
 
     new-array v4, v4, [F
@@ -1117,7 +1094,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1131,7 +1108,7 @@
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setPost_raw_digital_gain(F)V
 
-    :cond_3
+    :cond_2
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->FLASH_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1146,13 +1123,13 @@
 
     const/4 v3, 0x1
 
-    if-eq v2, v3, :cond_4
+    if-eq v2, v3, :cond_3
 
     const/4 v3, 0x2
 
-    if-ne v2, v3, :cond_d
+    if-ne v2, v3, :cond_c
 
-    :cond_4
+    :cond_3
     const/4 v2, 0x1
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setFlash(I)V
@@ -1175,8 +1152,6 @@
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v2
-
-    if-nez v2, :cond_5
 
     check-cast v2, [Landroid/util/Rational;
 
@@ -1222,7 +1197,6 @@
 
     invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/FrameMetadata;->setNeutral_point([F)V
 
-    :cond_5
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->BLACK_LEVEL_LOCK:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1231,7 +1205,7 @@
 
     check-cast v2, Ljava/lang/Boolean;
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_4
 
     const/4 v2, 0x0
 
@@ -1239,7 +1213,7 @@
 
     move-result-object v2
 
-    :cond_6
+    :cond_4
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
@@ -1262,7 +1236,7 @@
 
     sget-boolean v4, Lcok;->b:Z
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_5
 
     sget-object v4, Lcok;->a:Ljava/lang/String;
 
@@ -1294,7 +1268,7 @@
 
     invoke-static {v4, v2}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_7
+    :cond_5
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1303,16 +1277,16 @@
 
     check-cast v2, [Landroid/hardware/camera2/params/Face;
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_6
 
     array-length v3, v2
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_7
 
-    :cond_8
+    :cond_6
     move-object/from16 v2, p6
 
-    :cond_9
+    :cond_7
     invoke-virtual {v6}, Lcom/google/googlex/gcam/FrameMetadata;->getFaces()Lcom/google/googlex/gcam/FaceInfoVector;
 
     move-result-object v3
@@ -1335,7 +1309,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_8
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1349,7 +1323,7 @@
 
     invoke-static {v2, v3}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_a
+    :cond_8
     :goto_3
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->SENSOR_NOISE_PROFILE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1357,7 +1331,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_f
+    if-eqz v2, :cond_e
 
     check-cast v2, [Landroid/util/Pair;
 
@@ -1372,7 +1346,7 @@
     :goto_4
     const/4 v3, 0x4
 
-    if-ge v4, v3, :cond_e
+    if-ge v4, v3, :cond_d
 
     new-instance v3, Lcom/google/googlex/gcam/DngNoiseModel;
 
@@ -1414,12 +1388,35 @@
 
     goto :goto_4
 
-    :cond_b
+    :cond_9
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    :cond_c
+    :cond_a
+    if-le v2, v4, :cond_b
+
+    int-to-float v5, v4
+
+    int-to-float v3, v3
+
+    div-float v3, v5, v3
+
+    int-to-float v2, v2
+
+    int-to-float v4, v4
+
+    div-float/2addr v2, v4
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    goto/16 :goto_1
+
+    :cond_b
     int-to-float v2, v2
 
     int-to-float v3, v3
@@ -1430,7 +1427,7 @@
 
     goto/16 :goto_1
 
-    :cond_d
+    :cond_c
     const/4 v2, 0x0
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setFlash(I)V
@@ -1458,10 +1455,10 @@
 
     goto :goto_3
 
-    :cond_e
+    :cond_d
     invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/FrameMetadata;->setDng_noise_model_bayer([Lcom/google/googlex/gcam/DngNoiseModel;)V
 
-    :cond_f
+    :cond_e
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->SENSOR_DYNAMIC_BLACK_LEVEL:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1470,7 +1467,7 @@
 
     check-cast v2, [F
 
-    if-eqz v2, :cond_14
+    if-eqz v2, :cond_13
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
@@ -1491,9 +1488,9 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_10
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_10
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -1501,7 +1498,7 @@
 
     const/4 v5, 0x2
 
-    if-eq v4, v5, :cond_10
+    if-eq v4, v5, :cond_f
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -1509,16 +1506,16 @@
 
     const/4 v4, 0x1
 
-    if-ne v3, v4, :cond_11
+    if-ne v3, v4, :cond_10
 
-    :cond_10
+    :cond_f
     invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
     move-result v2
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setFocus_distance_diopters(F)V
 
-    :cond_11
+    :cond_10
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1587,7 +1584,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_11
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1595,7 +1592,7 @@
 
     invoke-virtual {v3, v2}, Lcom/google/googlex/gcam/AeMetadata;->setPrecapture_trigger(I)V
 
-    :cond_12
+    :cond_11
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p0, v2}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1744,7 +1741,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_12
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -1752,18 +1749,18 @@
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setLens_state(I)V
 
-    :cond_13
+    :cond_12
     new-instance v7, Lcom/google/googlex/gcam/OisMetadata;
 
     invoke-direct {v7}, Lcom/google/googlex/gcam/OisMetadata;-><init>()V
 
     sget-object v2, Lhit;->h:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_1f
 
     sget-object v2, Lhit;->i:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_1f
 
     sget-object v2, Lhit;->h:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1793,15 +1790,15 @@
 
     const/4 v4, 0x3
 
-    if-lt v3, v4, :cond_24
+    if-lt v3, v4, :cond_23
 
     sget-object v3, Lhit;->l:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v3, :cond_24
+    if-eqz v3, :cond_23
 
     sget-object v3, Lhit;->m:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v3, :cond_24
+    if-eqz v3, :cond_23
 
     sget-object v3, Lhit;->l:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1823,7 +1820,7 @@
 
     array-length v8, v3
 
-    if-ne v5, v8, :cond_1d
+    if-ne v5, v8, :cond_1c
 
     const/4 v5, 0x1
 
@@ -1874,7 +1871,7 @@
 
     array-length v8, v4
 
-    if-ne v5, v8, :cond_1e
+    if-ne v5, v8, :cond_1d
 
     const/4 v5, 0x1
 
@@ -1930,7 +1927,7 @@
     :goto_8
     array-length v9, v2
 
-    if-ge v5, v9, :cond_1f
+    if-ge v5, v9, :cond_1e
 
     new-instance v9, Lcom/google/googlex/gcam/OisPosition;
 
@@ -1954,7 +1951,7 @@
 
     goto :goto_8
 
-    :cond_14
+    :cond_13
     sget-object v2, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p1, v2}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -1969,20 +1966,20 @@
 
     const/4 v3, 0x0
 
-    sget v5, Lcok;->h:I
+    sget v9, Lcok;->h:I
 
-    if-nez v5, :cond_15
+    if-nez v9, :cond_14
 
     invoke-static {}, Lcok;->e()Z
 
-    move-result v5
+    move-result v9
 
-    if-eqz v5, :cond_15
+    if-eqz v9, :cond_14
 
     :goto_9
     const/4 v5, 0x4
 
-    if-ge v3, v5, :cond_1c
+    if-ge v3, v5, :cond_1b
 
     const/16 v5, 0x10
 
@@ -1994,17 +1991,17 @@
 
     goto :goto_9
 
-    :cond_15
+    :cond_14
     invoke-static {}, Lcok;->g()Z
 
-    move-result v5
+    move-result v9
 
-    if-eqz v5, :cond_16
+    if-eqz v9, :cond_15
 
     :goto_a
     const/4 v5, 0x4
 
-    if-ge v3, v5, :cond_1c
+    if-ge v3, v5, :cond_1b
 
     const/4 v5, 0x0
 
@@ -2016,19 +2013,19 @@
 
     goto :goto_a
 
-    :cond_16
-    sget v5, Lcok;->h:I
+    :cond_15
+    sget v9, Lcok;->h:I
 
-    if-eqz v5, :cond_1b
+    if-eqz v9, :cond_1a
 
-    sget v5, Lcok;->i:I
+    sget v9, Lcok;->i:I
 
-    if-eqz v5, :cond_1b
+    if-eqz v9, :cond_1a
 
     :goto_b
     const/4 v5, 0x4
 
-    if-ge v3, v5, :cond_1c
+    if-ge v3, v5, :cond_1b
 
     rem-int/lit8 v5, v3, 0x2
 
@@ -2042,43 +2039,43 @@
 
     const/4 v10, 0x0
 
-    if-ne v3, v10, :cond_17
+    if-ne v3, v10, :cond_16
 
     const v5, 0x42800000    # 64.0f
 
-    :cond_17
+    :cond_16
     const/4 v10, 0x1
 
-    if-ne v3, v10, :cond_18
+    if-ne v3, v10, :cond_17
 
     const v5, 0x427e0000    # 63.5f
 
-    :cond_18
+    :cond_17
     const/4 v10, 0x2
 
-    if-ne v3, v10, :cond_19
+    if-ne v3, v10, :cond_18
 
     const v5, 0x427f3333    # 63.8f
 
-    :cond_19
+    :cond_18
     const/4 v10, 0x3
 
-    if-ne v3, v10, :cond_1a
+    if-ne v3, v10, :cond_19
 
     const v5, 0x427f999a    # 63.9f
 
-    :cond_1a
+    :cond_19
     aput v5, v4, v3
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_b
 
-    :cond_1b
+    :cond_1a
     :goto_c
     const/4 v5, 0x4
 
-    if-ge v3, v5, :cond_1c
+    if-ge v3, v5, :cond_1b
 
     rem-int/lit8 v5, v3, 0x2
 
@@ -2096,31 +2093,31 @@
 
     goto :goto_c
 
-    :cond_1c
+    :cond_1b
     invoke-virtual {v6, v4}, Lcom/google/googlex/gcam/FrameMetadata;->setBlack_levels_bayer([F)V
 
     goto/16 :goto_5
 
-    :cond_1d
+    :cond_1c
     const/4 v5, 0x0
 
     goto/16 :goto_6
 
-    :cond_1e
+    :cond_1d
     const/4 v5, 0x0
 
     goto/16 :goto_7
 
-    :cond_1f
+    :cond_1e
     invoke-virtual {v7, v8}, Lcom/google/googlex/gcam/OisMetadata;->setOis_positions(Lcom/google/googlex/gcam/OisPositionVector;)V
 
-    :cond_20
+    :cond_1f
     :goto_d
     invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/FrameMetadata;->setOis_metadata(Lcom/google/googlex/gcam/OisMetadata;)V
 
     sget-object v2, Lhit;->n:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v2, :cond_21
+    if-eqz v2, :cond_20
 
     sget-object v2, Lhit;->n:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -2136,15 +2133,15 @@
 
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setExposure_time_boost(F)V
 
-    :cond_21
-    if-eqz p7, :cond_22
+    :cond_20
+    if-eqz p7, :cond_21
 
     move-object/from16 v0, p7
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/FrameMetadata;->setGyro_samples(Lcom/google/googlex/gcam/GyroSampleVector;)V
 
-    :cond_22
-    if-eqz p4, :cond_23
+    :cond_21
+    if-eqz p4, :cond_22
 
     iget v2, p2, Lcnx;->b:I
 
@@ -2181,17 +2178,17 @@
 
     invoke-static {v3, p0, v4}, Lfkg;->a(Ljava/lang/String;Liic;Ljava/io/File;)V
 
-    :cond_23
+    :cond_22
     return-object v6
 
-    :cond_24
+    :cond_23
     sget-object v3, Lhit;->j:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v3, :cond_20
+    if-eqz v3, :cond_1f
 
     sget-object v3, Lhit;->k:Landroid/hardware/camera2/CaptureResult$Key;
 
-    if-eqz v3, :cond_20
+    if-eqz v3, :cond_1f
 
     sget-object v3, Lhit;->j:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -2213,7 +2210,7 @@
 
     array-length v8, v3
 
-    if-ne v5, v8, :cond_25
+    if-ne v5, v8, :cond_24
 
     const/4 v5, 0x1
 
@@ -2264,7 +2261,7 @@
 
     array-length v8, v4
 
-    if-ne v5, v8, :cond_26
+    if-ne v5, v8, :cond_25
 
     const/4 v5, 0x1
 
@@ -2320,7 +2317,7 @@
     :goto_11
     array-length v9, v2
 
-    if-ge v5, v9, :cond_27
+    if-ge v5, v9, :cond_26
 
     new-instance v9, Lcom/google/googlex/gcam/OisPosition;
 
@@ -2356,17 +2353,17 @@
 
     goto :goto_11
 
-    :cond_25
+    :cond_24
     const/4 v5, 0x0
 
     goto/16 :goto_f
 
-    :cond_26
+    :cond_25
     const/4 v5, 0x0
 
     goto :goto_10
 
-    :cond_27
+    :cond_26
     invoke-virtual {v7, v8}, Lcom/google/googlex/gcam/OisMetadata;->setOis_positions(Lcom/google/googlex/gcam/OisPositionVector;)V
 
     goto/16 :goto_d
@@ -2979,15 +2976,8 @@
 
     move-result v0
 
-    sget v9, Lcok;->o:I
+    const/16 v0, 0x3fc
 
-    const/4 v10, 0x1
-
-    if-ne v9, v10, :cond_10
-
-    div-int/lit8 v0, v0, 0x1
-
-    :goto_5
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
 
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -2996,9 +2986,9 @@
 
     move-result-object v0
 
-    check-cast v0, [Landroid/graphics/Rect;
-
     if-eqz v0, :cond_c
+
+    check-cast v0, [Landroid/graphics/Rect;
 
     new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
 
@@ -3008,7 +2998,7 @@
 
     move v5, v1
 
-    :goto_6
+    :goto_5
     if-ge v5, v8, :cond_b
 
     aget-object v9, v0, v5
@@ -3037,7 +3027,7 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_b
     invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
@@ -3068,7 +3058,7 @@
     :pswitch_0
     move v0, v2
 
-    :goto_7
+    :goto_6
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
 
     new-array v3, v4, [I
@@ -3141,9 +3131,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_d
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_FORWARD_MATRIX1:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v1}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
@@ -3183,7 +3171,6 @@
 
     invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
 
-    :cond_d
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v0}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -3192,9 +3179,7 @@
 
     check-cast v0, Ljava/lang/Byte;
 
-    if-eqz v0, :cond_e
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_FORWARD_MATRIX2:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v1}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
@@ -3234,24 +3219,23 @@
 
     invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
 
-    :cond_e
     invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
 
     sget v10, Lcok;->h:I
 
-    if-nez v10, :cond_12
+    if-nez v10, :cond_e
 
     invoke-static {}, Lcok;->d()Z
 
     move-result v10
 
-    if-eqz v10, :cond_12
+    if-eqz v10, :cond_e
 
-    const/16 v1, 0x910
+    const/16 v1, 0x1240
 
     invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
 
-    const/16 v0, 0x6d0
+    const/16 v0, 0xdb8
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
 
@@ -3261,9 +3245,9 @@
 
     const/16 v11, 0x8
 
-    const/16 v3, 0x908
+    const/16 v3, 0x1238
 
-    const/16 v4, 0x6c8
+    const/16 v4, 0xdb0
 
     invoke-direct {v7, v10, v11, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
@@ -3297,15 +3281,15 @@
 
     move-result-object v1
 
-    const/16 v0, 0x910
+    const/16 v0, 0x1240
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
 
-    const/16 v0, 0x6d0
+    const/16 v0, 0xdb8
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
 
-    :goto_8
+    :goto_7
     const/16 v0, 0x25
 
     invoke-interface {p0, v0}, Lgdq;->a(I)Ljava/util/List;
@@ -3370,7 +3354,7 @@
 
     sget v0, Lcok;->h:I
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_d
 
     const-string v0, "LGE"
 
@@ -3380,26 +3364,10 @@
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
 
-    :cond_f
+    :cond_d
     return-object v6
 
-    :cond_10
-    sget v9, Lcok;->o:I
-
-    const/4 v10, 0x2
-
-    if-ne v9, v10, :cond_11
-
-    div-int/lit8 v0, v0, 0x2
-
-    goto/16 :goto_5
-
-    :cond_11
-    const/4 v10, 0x0
-
-    goto/16 :goto_5
-
-    :cond_12
+    :cond_e
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p0, v0}, Lgdq;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -3466,24 +3434,22 @@
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
 
-    goto/16 :goto_8
+    goto/16 :goto_7
 
     :pswitch_1
     const/4 v0, 0x3
 
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :pswitch_2
     move v0, v3
 
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :pswitch_3
     move v0, v4
 
-    goto/16 :goto_7
-
-    nop
+    goto/16 :goto_6
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -5256,55 +5222,65 @@
 .method public static d()Z
     .locals 2
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v1, "sagit"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "OnePlus3"
+    const-string v0, "OnePlus5T"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v1, "OnePlus3T"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "OnePlus5T"
+    const-string v0, "OnePlus5"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v1, "OnePlus5"
+    const-string v0, "OnePlus3T"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus3"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "jason"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :cond_0
     const/4 v0, 0x1
@@ -5506,13 +5482,13 @@
 .method public static f()Z
     .locals 2
 
-    sget v0, Lcok;->h:I
+    sget v1, Lcok;->h:I
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v1, "gemini"
+    const-string v0, "gemini"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5520,11 +5496,11 @@
 
     if-eqz v1, :cond_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x1a
+    const/16 v0, 0x1a
 
-    if-ge v0, v1, :cond_0
+    if-ge v1, v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -5595,25 +5571,25 @@
 .method public static h()Z
     .locals 2
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v1, "htc_pmewl"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "potter"
+    const-string v0, "potter"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "htc_pmewl"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :cond_0
     const/4 v0, 0x1

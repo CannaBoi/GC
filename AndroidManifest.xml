@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.oneplus.camera.CAMERA_SERVICE"/>
+    <uses-permission android:name="com.oneplus.camera.PICTURE_PROCESS_SERVICE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.NFC"/>
@@ -22,11 +24,14 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-feature android:name="android.hardware.camera.level.full" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.capability.manual_post_processing" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.capability.raw" android:required="true"/>
     <uses-feature android:name="android.hardware.location" android:required="false"/>
     <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
     <uses-feature android:name="android.hardware.location.network" android:required="false"/>
     <uses-feature android:name="android.hardware.wifi" android:required="false"/>
     <uses-feature android:name="com.google.android.feature.GOOGLE_EXPERIENCE" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="false"/>
     <application android:allowBackup="true" android:backupAgent="com.google.android.apps.camera.backup.CameraBackupAgent" android:fullBackupOnly="false" android:hardwareAccelerated="true" android:icon="@mipmap/adaptiveproduct_pixelcamera" android:label="@string/app_name" android:largeHeap="true" android:name="com.google.android.apps.camera.legacy.app.app.CameraApp" android:restoreAnyVersion="true" android:supportsRtl="true" android:theme="@style/Theme.Camera" android:usesCleartextTraffic="false">
         <uses-library android:name="com.google.android.gestureservice" android:required="false"/>

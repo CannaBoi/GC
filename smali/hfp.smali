@@ -1195,7 +1195,7 @@
 
     const/4 v0, 0x3
 
-    invoke-virtual {v1}, Lbhn;->n()I
+    invoke-virtual {}, Lbhn;->n()I
 
     move-result v0
 

@@ -788,5 +788,6 @@
     <string name="pref_enable_front_hdr_summary">После выключения портретный режим на фронт.камере работать не будет. Чтобы изменения вступили в силу требуется перезапуск приложения</string>
     <string name="pref_hdrplus_settings_title">Настройки HDR+</string>
     <string name="pref_misc_settings_title">Другие настройки</string>
-    <string name="pref_enable_aemode_title">Режим авто-экспозиции</string>
+    <string name="pref_aemode_title">Режим авто-экспозиции</string>
+    <string name="pref_disable_zoom_title">Отключить масштабирование в портретном режиме</string>
 </resources>

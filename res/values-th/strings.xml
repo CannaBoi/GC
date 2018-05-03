@@ -790,5 +790,6 @@
     <string name="pref_enable_front_hdr_summary">การปิด HDR+ กล้องหน้าทำให้ใช้โหมดภาพถ่ายบุคคลไม่ได้ มีผลเมื่อเริ่มใช้งานแอปใหม่</string>
     <string name="pref_hdrplus_settings_title">ตั้งค่า HDR+</string>
     <string name="pref_misc_settings_title">การตั้งค่าอื่นๆ</string>
-    <string name="pref_enable_aemode_title">ตั้งค่าความเร็วชัตเตอร์</string>
+    <string name="pref_aemode">ตั้งค่าความเร็วชัตเตอร์</string>
+    <string name="pref_disable_zoom_title">ปิดการซูมในโหมดภาพถ่ายบุคคล มีผลเมื่อเปิดใช้งานแอปใหม่อีกครั้ง</string>
 </resources>
