@@ -659,8 +659,9 @@ Giữ đối tượng ở chính giữa."</string>
     <string name="setting_front_camera_photo">Độ phân giải ảnh của máy ảnh trước</string>
     <string name="setting_front_camera_video">Độ phân giải video của máy ảnh trước</string>
     <string name="setting_general">Chung</string>
-    <string name="pref_developer_title">Gỡ lỗi và công cụ</string>
-    <string name="pref_parameters_camera_title">Tham số HDR+</string>
+    <string name="setting_google_feedback">Gửi phản hồi</string>
+    <string name="setting_google_help">Trợ giúp</string>
+    <string name="setting_google_help_and_feedback">Trợ giúp và phản hồi</string>
     <string name="setting_location">Vị trí</string>
     <string name="setting_off">Tắt</string>
     <string name="setting_on">Bật</string>
@@ -763,6 +764,8 @@ Hãy di chuyển thiết bị chậm"</string>
     <string name="zoom_announcement">Giá trị thu phóng là %.1f</string>
     <string name="zoom_minus_desc">Thu nhỏ</string>
     <string name="zoom_plus_desc">Phóng to</string>
+    <string name="pref_developer_title">Gỡ lỗi và công cụ</string>
+    <string name="pref_parameters_camera_title">Tham số HDR+</string>
     <string name="pref_parameters_camera_0">Mặc định (thấp nhất)</string>
     <string name="pref_parameters_camera_1">Thấp</string>
     <string name="pref_parameters_camera_2">Trung bình</string>
@@ -774,20 +777,13 @@ Hãy di chuyển thiết bị chậm"</string>
     <string name="pref_compress_dng_title">Nén ảnh RAW</string>
     <string name="pref_compress_dng_summary">Nén DNG để giảm dung lượng</string>
     <string name="pref_refocus_resolution_title">Độ phân giải của Lens blur</string>
-    <string name="pref_enable_zsl_title">Bật ZSL</string>
-    <string name="pref_enable_zsl_summary">Bật Không có độ trễ màn trập ở cấu hình được hỗ trợ</string>
-    <string name="pref_config_camera_title">Tùy chỉnh camera HDR+</string>
     <string name="pref_enable_lowlight_title">Cải thiện khi ánh sáng yếu</string>
     <string name="pref_enable_lowlight_summary">Loại bỏ màu hồng/đỏ/tím khi ánh sáng yếu</string>
     <string name="pref_enable_noise_title">Cải thiện độ sắc nét</string>
     <string name="pref_enable_noise_summary">Cải thiện độ sắc nét ảnh sẽ nhiễu hơn. Khởi động lại ứng dụng, thay đổi sẽ có hiệu lực.</string>
-    <string name="pref_enable_front_hdr_title">Tắt HDR+ camera trước</string>
-    <string name="pref_enable_front_hdr_summary">Tắt HDR+ camera trước chế độ chân dung sẽ không còn hoạt động. Khởi động lại ứng dụng, thay đổi sẽ có hiệu lực.</string>
     <string name="pref_hdrplus_settings_title">Cài đặt HDR+</string>
     <string name="pref_misc_settings_title">Cài đặt tổng hợp</string>
     <string name="pref_disable_zoom_title">Tắt zoom ở chế độ chân dung</string>
-    <string name="setting_google_feedback">Gửi phản hồi</string>
-    <string name="setting_google_help">Trợ giúp</string>
-    <string name="setting_google_help_and_feedback">Trợ giúp và phản hồi</string>
+    <string name="pref_config_camera_title">Tùy chỉnh camera HDR+</string>
     <string name="pref_enable_aemode_title">Chế độ phơi sáng tự động</string>
 </resources>

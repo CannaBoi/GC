@@ -1303,8 +1303,6 @@
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->EDGE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    const/4 v5, 0x3
-
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1341,7 +1339,7 @@
 
     move-result-object v0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_data_0
     .packed-switch 0x0

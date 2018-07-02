@@ -111,7 +111,7 @@
 
     const/16 v2, 0x8
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v2, :cond_2
 
     new-instance v1, Lbei;
 
@@ -169,8 +169,19 @@
 
     move-result-object v1
 
-    const/16 v2, 0x1e
+    sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
+    const-string v7, "OnePlus6_MayNotNeed"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const/16 v2, 0x3c
+
+    :goto_1
     invoke-virtual {v1, v2}, Lbei;->k(I)Lbei;
 
     move-result-object v1
@@ -184,6 +195,11 @@
     goto :goto_0
 
     :cond_1
+    const/16 v2, 0x1e
+
+    goto :goto_1
+
+    :cond_2
     iget-object v0, p0, Ligc;->b:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -347,7 +363,7 @@
 
     const/16 v2, 0x8
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v2, :cond_2
 
     new-instance v1, Lbei;
 
@@ -405,8 +421,19 @@
 
     move-result-object v1
 
-    const/16 v2, 0x1e
+    sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
+    const-string v7, "OnePlus6_MayNotNeed"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const/16 v2, 0x3c
+
+    :goto_1
     invoke-virtual {v1, v2}, Lbei;->k(I)Lbei;
 
     move-result-object v1
@@ -420,6 +447,11 @@
     goto :goto_0
 
     :cond_1
+    const/16 v2, 0x1e
+
+    goto :goto_1
+
+    :cond_2
     iget-object v0, p0, Ligc;->b:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -495,6 +527,16 @@
 
 .method public static d()Z
     .locals 2
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus6_MayNotNeed"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 

@@ -32,7 +32,7 @@
 .end method
 
 .method public constructor <init>(Lgdq;)V
-    .locals 6
+    .locals 4
 
     const/4 v3, 0x0
 
@@ -59,18 +59,6 @@
     invoke-interface {p1, v0}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object v0
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    const/16 v2, 0x8
-
-    const v5, 0x1238
-
-    const v4, 0xdb0
-
-    invoke-direct {v1, v2, v2, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    move-object v0, v1
 
     check-cast v0, Landroid/graphics/Rect;
 

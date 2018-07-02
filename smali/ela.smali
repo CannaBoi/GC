@@ -273,7 +273,7 @@
 
     new-instance v2, Landroid/graphics/Rect;
 
-    invoke-direct {v2, v6, v6, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v6, v6, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     const/4 v3, 0x2
 

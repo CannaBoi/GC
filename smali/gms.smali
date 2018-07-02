@@ -87,7 +87,7 @@
 
     packed-switch p0, :pswitch_data_0
 
-    sget-object v0, Lgms;->b:Lgms;
+    sget-object v0, Lgms;->a:Lgms;
 
     :goto_0
     return-object v0

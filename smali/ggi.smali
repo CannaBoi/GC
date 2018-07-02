@@ -34,7 +34,7 @@
 
     iget v2, v0, Lggg;->f:I
 
-    iget v3, v0, Lggg;->BadTF:I
+    iget v3, v0, Lggg;->k:I
 
     add-int v2, v2, v3
 

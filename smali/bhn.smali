@@ -47,16 +47,6 @@
 
     iput-boolean v1, v0, Lihk;->m:Z
 
-    invoke-virtual {p0}, Lbhn;->s()I
-
-    move-result v1
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iput-boolean v1, v0, Lihk;->n:Z
-
     return-void
 .end method
 
@@ -92,52 +82,8 @@
     goto :goto_0
 .end method
 
-.method public static t()I
-    .locals 1
-
-    const-string/jumbo v0, "pref_disable_zoom_key"
-
-    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
 
 # virtual methods
-.method public MenuValue(Ljava/lang/String;)I
-    .locals 3
-
-    iget-object v1, p0, Lbhn;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v2, 0x0
-
-    iget-object v1, p0, Lbhn;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public final a()Ljava/lang/String;
     .locals 3
 
@@ -379,7 +325,9 @@
 
     const/16 v2, 0xf
 
-    invoke-virtual {p0}, Lbhn;->j()I
+    const-string/jumbo v0, "pref_parameters_camera_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -447,7 +395,9 @@
 
     const/16 v0, 0x8
 
-    invoke-virtual {p0}, Lbhn;->j()I
+    const-string/jumbo v1, "pref_parameters_camera_key"
+
+    invoke-static {v1}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v1
 
@@ -528,6 +478,18 @@
     return v0
 .end method
 
+.method public h()I
+    .locals 1
+
+    const-string/jumbo v0, "pref_enable_hdrplus_portrait_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final h()Z
     .locals 3
 
@@ -547,82 +509,13 @@
 .method public final i()Z
     .locals 3
 
-    const/4 v2, 0x0
-
-    invoke-virtual {p0}, Lbhn;->q()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v2, 0x1
-
-    :cond_0
     iget-object v0, p0, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v1, "camera:zsl_enabled"
 
+    const/4 v2, 0x1
+
     invoke-virtual {p0, v0, v1, v2}, Lbhn;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public j()I
-    .locals 1
-
-    const-string v0, "pref_parameters_camera_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public k()I
-    .locals 1
-
-    const-string v0, "pref_config_camera_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public l()I
-    .locals 1
-
-    const-string v0, "pref_compress_jpeg_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public m()I
-    .locals 1
-
-    const-string v0, "pref_compress_dng_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public n()I
-    .locals 1
-
-    const-string v0, "pref_refocus_resolution_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
@@ -632,81 +525,9 @@
 .method public o()I
     .locals 1
 
-    const-string v0, "pref_enable_gouda_mode_key"
+    const-string/jumbo v0, "pref_classic_smartburst_key"
 
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public p()I
-    .locals 1
-
-    const-string v0, "pref_enable_lowlight_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public q()I
-    .locals 1
-
-    const-string v0, "pref_enable_zsl_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public r()I
-    .locals 1
-
-    const-string v0, "pref_enable_noise_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public s()I
-    .locals 1
-
-    const-string v0, "pref_enable_front_hdr_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public setaemode()I
-    .locals 1
-
-    const-string v0, "pref_aemode_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public setpaemode()I
-    .locals 1
-
-    const-string v0, "pref_paemode_key"
-
-    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 

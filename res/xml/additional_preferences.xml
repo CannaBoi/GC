@@ -2,7 +2,7 @@
 <PreferenceCategory android:title="@string/pref_category_about" android:key="_pref_category_about"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/pref_category_about" android:key="pref_category_about">
-        <PreferenceScreen android:title="GoogleCamera-Pixel2Mod-Arnova8G2" android:summary="Version 7">
+        <PreferenceScreen android:title="GoogleCamera-Pixel2Mod-Arnova8G2" android:summary="Version 8">
             <intent android:action="android.settings.APPLICATION_DETAILS_SETTINGS" android:data="package:com.google.android.Pixel2Mod" />
         </PreferenceScreen>
         <PreferenceScreen android:title="Google Camera">
@@ -14,29 +14,32 @@
         <PreferenceScreen android:title="Arnova8G2" android:key="pref_arnova_about" android:summary="He makes B-S-G's work compatible with more phones">
             <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4860033" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="Charles_l" android:key="pref_charles1_about" android:summary="Develop the Camera NX mod for all google devices">
-            <intent android:action="android.intent.action.VIEW" android:data="https://chromloop.com" />
-        </PreferenceScreen>
         <PreferenceScreen android:title="cstark27" android:summary="His versions are optimised for the LG and add the wide camera version">
             <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=2712580" />
         </PreferenceScreen>
         <PreferenceScreen android:title="miniuser123" android:summary="Develop specially one with a Exynos SoC, His versions are optimised for the Samsung Galaxy S7.">
             <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4798833" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="Tolyan009" android:summary="His versions for the OP3/3T and the settings menu very tidy.">
+        <PreferenceScreen android:title="Tolyan009" android:summary="His work is optimised for the OP3/3T and the settings menu very tidy.">
             <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=963262" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="UriKill" android:summary="His versions for the Redmi Note 4X Snapdragon.">
+        <PreferenceScreen android:title="UriKill" android:summary="His work is optimised for the Redmi Note 4X Snapdragon.">
             <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=2682185" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="skulshady" android:summary="His versions for the OP3/3T and the settings menu very tidy.">
-            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=7578917" />
+        <PreferenceScreen android:title="Serjo87" android:summary="His work is optimised for the Xiaomi Redmi 3/Note 3 Pro.">
+            <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=1613883" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="arthur" android:summary="His work is optimised for the Xiaomi Redmi 4X and based on the work of other developers.">
+            <intent android:action="android.intent.action.VIEW" android:data="https://4pda.ru/forum/index.php?showuser=1515368" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="IDan1109" android:summary="His work is optimised for Samsung Galaxy S8 (Exynos).">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=4456903" />
         </PreferenceScreen>
         <PreferenceScreen android:title="defcomg" android:key="pref_defcomg_about" android:summary="Develop lib OP3/OP3T/OP5/OP5T for Front HDR+, Manual Focus and Manual ISO">
             <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=377973" />
         </PreferenceScreen>
-        <PreferenceScreen android:title="Other developer" android:summary="Ivanich, Scrubber">
-            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />
+        <PreferenceScreen android:title="Other developer" android:summary="Charles_l, skulshady, al_ro, alone_in_dark, Scrubber, Ivanich">
+            <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera/versions/#diffdevelopers" />
         </PreferenceScreen>
         <PreferenceScreen android:summary="Info and download of the other version on S4turno's website">
             <intent android:action="android.intent.action.VIEW" android:data="https://www.celsoazevedo.com/files/android/google-camera" />

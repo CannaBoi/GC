@@ -201,18 +201,6 @@
 
     move-result-object v2
 
-    new-instance v9, Landroid/graphics/Rect;
-
-    const/16 v10, 0x8
-
-    const v11, 0x1238
-
-    const v12, 0xdb0
-
-    invoke-direct {v9, v10, v10, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    move-object v2, v9
-
     check-cast v2, Landroid/graphics/Rect;
 
     move-object/from16 v0, p0

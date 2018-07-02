@@ -190,6 +190,14 @@
     goto :goto_0
 
     :pswitch_0
+    const-string/jumbo v0, "pref_support_level_override_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -245,14 +253,31 @@
 
     goto :goto_1
 
+    :cond_5
+    const-string/jumbo v0, "pref_supported_hardware_level_back_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_1
+
     :pswitch_1
+    const-string/jumbo v0, "pref_support_level_override_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     const/4 v1, 0x0
 
-    if-ne v3, v1, :cond_5
+    if-ne v3, v1, :cond_6
 
     const/4 v0, 0x2
 
@@ -263,39 +288,48 @@
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     const/4 v1, 0x1
 
-    if-ne v3, v1, :cond_6
+    if-ne v3, v1, :cond_7
 
     const/4 v0, 0x4
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     const/4 v1, 0x2
 
-    if-ne v3, v1, :cond_7
+    if-ne v3, v1, :cond_8
 
     const/4 v0, 0x1
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     const/4 v1, 0x3
 
-    if-ne v3, v1, :cond_8
+    if-ne v3, v1, :cond_9
 
     const/4 v0, 0x0
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     iget-object v0, p1, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v1, "camera:capture_support_level_override_front"
 
     invoke-static {v0, v1, v2}, Lhyx;->a(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    goto :goto_2
+
+    :cond_a
+    const-string/jumbo v0, "pref_supported_hardware_level_front_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 

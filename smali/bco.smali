@@ -12,6 +12,8 @@
 # static fields
 .field public static final a:Ljava/lang/String;
 
+.field public static l:I
+
 
 # instance fields
 .field public final b:Lbby;
@@ -97,7 +99,7 @@
 
     iget-object v0, p0, Lbco;->b:Lbby;
 
-    invoke-interface {v0}, Lbby;->a()Landroid/util/Range;
+    invoke-interface {v0}, Lbby;->b()Landroid/util/Range;
 
     move-result-object v0
 
@@ -155,7 +157,18 @@
 
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    if-eqz v2, :cond_0
+    sget v4, Lbco;->l:I
+
+    if-eqz v4, :cond_0
+
+    const v4, 0x0
+
+    sput v4, Lbco;->l:I
+
+    const/4 v2, 0x0
+
+    :cond_0
+    if-eqz v2, :cond_1
 
     const/4 v0, 0x4
 
@@ -192,7 +205,7 @@
 
     return-object v1
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x1
 
     goto :goto_0

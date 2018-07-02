@@ -35,7 +35,7 @@
 
     const-string v1, "ENG"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesPixel2ModEng"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProviderEng"
 
     invoke-direct {v0, v1, v3, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -45,7 +45,7 @@
 
     const-string v1, "FISHFOOD"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesPixel2ModNext"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProviderNext"
 
     invoke-direct {v0, v1, v4, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 

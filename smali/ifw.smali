@@ -504,25 +504,13 @@
 .end method
 
 .method public final e()Landroid/graphics/Rect;
-    .locals 5
+    .locals 1
 
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-virtual {p0, v0}, Lifw;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object v0
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    const/16 v2, 0x8
-
-    const v3, 0x1238
-
-    const v4, 0xdb0
-
-    invoke-direct {v1, v2, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    move-object v0, v1
 
     check-cast v0, Landroid/graphics/Rect;
 

@@ -3174,8 +3174,64 @@
 .end method
 
 .method final p()V
-    .locals 8
+    .locals 9
 
+    iget-object v1, p0, Lcsk;->w:Lbtx;
+
+    invoke-interface {v1}, Lbtx;->q()Lgsm;
+
+    move-result-object v8
+
+    const-string v2, "default_scope"
+
+    const-string v3, "pref_camera_hdr_plus_key"
+
+    invoke-virtual {v8, v2, v3}, Lgsm;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "off"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "default_scope"
+
+    const-string v3, "pref_camera_hdr_plus_raw_out_key"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v8, v2, v3, v4}, Lgsm;->b(Ljava/lang/String;Ljava/lang/String;Z)V
+
+    :cond_0
+    const-string v2, "default_scope"
+
+    const-string v3, "pref_camera_hdr_plus_raw_out_key"
+
+    invoke-virtual {v8, v2, v3}, Lgsm;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "1"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "default_scope"
+
+    const-string v3, "pref_mode_vesper_enabled"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v8, v2, v3, v4}, Lgsm;->b(Ljava/lang/String;Ljava/lang/String;Z)V
+
+    :cond_1
     const/4 v7, 0x0
 
     sget-object v0, Lcsk;->c:Ljava/lang/String;
@@ -3192,7 +3248,7 @@
 
     iget-object v0, p0, Lcsk;->A:Ldhi;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
@@ -3203,7 +3259,7 @@
     :goto_0
     return-void
 
-    :cond_0
+    :cond_2
     iget-object v0, p0, Lcsk;->as:Lflc;
 
     invoke-interface {v0}, Lflc;->c()V
@@ -3226,7 +3282,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
@@ -3236,14 +3292,14 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     iget-wide v0, p0, Lcsk;->aK:J
 
     const-wide/16 v2, 0x0
 
     cmp-long v0, v0, v2
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_4
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -3304,7 +3360,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_4
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J

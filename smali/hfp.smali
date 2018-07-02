@@ -1195,7 +1195,9 @@
 
     const/4 v0, 0x3
 
-    invoke-virtual {}, Lbhn;->n()I
+    const-string/jumbo v0, "pref_refocus_resolution_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 

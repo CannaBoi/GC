@@ -35,69 +35,6 @@
 
 
 # virtual methods
-.method public BadTF()I
-    .locals 3
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "jason"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "potter"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "OnePlus5"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "OnePlus5T"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "sagit"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v1, "chiron"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    :cond_0
-    return v2
-.end method
-
 .method public final a()V
     .locals 13
 
@@ -108,7 +45,7 @@
 
     iget-object v0, v0, Legp;->a:Ldsg;
 
-    invoke-virtual {p0}, Legr;->BadTF()I
+    invoke-virtual {p0}, Legr;->k()I
 
     move-result v1
 
@@ -505,6 +442,81 @@
     move-object v1, v2
 
     goto :goto_5
+.end method
+
+.method public k()I
+    .locals 3
+
+    const/4 v2, 0x0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "jason"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "potter"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    const-string v1, "sdm845"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "sagit"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v1, "chiron"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    :cond_0
+    return v2
 .end method
 
 .method public final toString()Ljava/lang/String;

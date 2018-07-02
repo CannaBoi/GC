@@ -110,101 +110,74 @@
     .end array-data
 .end method
 
-.method private final a(Z)Legu;
-    .locals 10
+.method private final a()Legu;
+    .locals 8
 
-    const/4 v4, 0x3
+    iget-object v0, p0, Ldio;->d:Lbhn;
 
-    const/4 v5, 0x2
-
-    sget v0, Lcok;->sHDRen:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v5, 0x0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Ldio;->c:Ldig;
-
-    const-string v3, "persist.gcam.bgae.enabled"
-
-    sget-boolean v6, Ldig;->a:Z
-
-    invoke-virtual {v0, v3, v6}, Ldig;->a(Ljava/lang/String;Z)Z
+    invoke-virtual {v0}, Lbhn;->h()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    move v0, v1
+    const/4 v7, 0x0
 
     :goto_0
-    iget-object v3, p0, Ldio;->c:Ldig;
+    const/4 v6, 0x0
 
-    const-string v6, "persist.gcam.sm.denom"
+    iget-object v0, p0, Ldio;->c:Ldig;
 
-    invoke-virtual {v3, v6}, Ldig;->a(Ljava/lang/String;)I
+    const-string v1, "persist.gcam.sm.denom"
 
-    move-result v6
+    invoke-virtual {v0, v1}, Ldig;->a(Ljava/lang/String;)I
 
-    if-eqz v0, :cond_2
+    move-result v0
 
-    move v3, v4
+    sget-object v1, Ldio;->a:Ljava/lang/String;
 
-    :goto_1
-    sget-object v7, Ldio;->a:Ljava/lang/String;
+    const-string v2, "Smart metering configuration for auto-HDR+ decision: eager = %s, period = %d, max image count = %d"
 
-    const-string v8, "Smart metering configuration for auto-HDR+ decision: eager = %s, period = %d, max image count = %d"
+    const/4 v3, 0x3
 
-    new-array v4, v4, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v9
+    move-result-object v4
 
-    aput-object v9, v4, v2
+    aput-object v4, v3, v6
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v4, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v3, v7
+
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    aput-object v2, v4, v1
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v8, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v7, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Legu;
 
-    invoke-direct {v1, v0, v6, v3}, Legu;-><init>(ZII)V
+    invoke-direct {v1, v6, v0, v7}, Legu;-><init>(ZII)V
 
     return-object v1
 
-    :cond_1
-    move v0, v2
+    :cond_0
+    const/4 v7, 0x2
 
     goto :goto_0
-
-    :cond_2
-    move v3, v5
-
-    goto :goto_1
 .end method
 
 .method private static a(Lgdq;Lgdp;)Lgkr;
@@ -392,149 +365,23 @@
 
     invoke-interface {v0}, Licz;->a()V
 
-    iget-object v0, p0, Ldio;->d:Lbhn;
+    const-string/jumbo v0, "pref_paemode_key"
 
-    invoke-virtual {v0}, Lbhn;->setpaemode()I
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Ldio;->d:Lbhn;
+    const-string/jumbo v0, "pref_aemode_key"
 
-    invoke-virtual {v0}, Lbhn;->setaemode()I
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v0
 
     :cond_0
     sput v0, Lcok;->sAEMode:I
 
-    iget-object v0, p0, Ldio;->e:Lgzz;
-
-    invoke-virtual {v0}, Lgzz;->c()Z
-
-    move-result v0
-
-    goto/16 :goto_1
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ldio;->g:Lbip;
-
-    invoke-virtual {v0}, Lbip;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ldio;->d:Lbhn;
-
-    invoke-virtual {v0}, Lbhn;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Ldij;->e:Ldij;
-
-    invoke-virtual {v1, v0}, Ldij;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Lgdq;->b()Lige;
-
-    move-result-object v0
-
-    sget-object v3, Lige;->b:Lige;
-
-    if-ne v0, v3, :cond_1
-
-    sget-object v0, Ldio;->a:Ljava/lang/String;
-
-    const-string v1, "Selected Pixel 2017 Zsl Hdr PD OneCamera configuration."
-
-    invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p4, p2}, Ldio;->a(Ldii;Lgdq;)Ldql;
-
-    move-result-object v1
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0x101
-
-    aput v4, v0, v3
-
-    invoke-static {p2, v0}, Ldio;->a(Lgdq;[I)Ligq;
-
-    move-result-object v0
-
-    invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Ldqf;
-
-    invoke-static {p4}, Ldio;->a(Ldii;)I
-
-    move-result v4
-
-    iget-object v0, v0, Ligq;->b:Lici;
-
-    invoke-direct {v3, v4, v0}, Ldqf;-><init>(ILici;)V
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldio;->a(Z)Legu;
-
-    move-result-object v4
-
-    new-instance v0, Ldog;
-
-    invoke-direct {v0, v2, v1, v3, v4}, Ldog;-><init>(Ldoc;Ldql;Ldqf;Legu;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    iget-object v0, p0, Ldio;->e:Lgzz;
-
-    invoke-virtual {v0}, Lgzz;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Ldio;->g:Lbip;
-
-    invoke-virtual {v0}, Lbip;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Lgdq;->b()Lige;
-
-    move-result-object v0
-
-    sget-object v3, Lige;->a:Lige;
-
-    if-ne v0, v3, :cond_3
-
-    :cond_2
-    iget-object v0, p0, Ldio;->d:Lbhn;
-
-    invoke-virtual {v0}, Lbhn;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :goto_1
     sget-object v0, Ldio;->a:Ljava/lang/String;
 
     const-string v1, "Selected Pixel 2017 Zsl Hdr No PD OneCamera configuration."
@@ -545,9 +392,7 @@
 
     move-result-object v1
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldio;->a(Z)Legu;
+    invoke-direct {p0}, Ldio;->a()Legu;
 
     move-result-object v3
 
@@ -555,50 +400,5 @@
 
     invoke-direct {v0, v2, v1, v3}, Ldof;-><init>(Ldoc;Ldql;Legu;)V
 
-    goto :goto_0
-
-    :cond_3
-    sget-object v0, Ldio;->a:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x27
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "No camera configuration was available! "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Unknown capture support level"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v0
 .end method

@@ -627,3 +627,125 @@
 
     goto :goto_0
 .end method
+
+.method public static b(I)I
+    .locals 3
+
+    sparse-switch p0, :sswitch_data_0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const/16 v1, 0x24
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Invalid Miui rotation: "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :sswitch_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :sswitch_1
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :sswitch_2
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    :sswitch_3
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0x5a -> :sswitch_1
+        0xb4 -> :sswitch_2
+        0x10e -> :sswitch_3
+    .end sparse-switch
+.end method
+
+.method public static c(I)I
+    .locals 3
+
+    sparse-switch p0, :sswitch_data_0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const/16 v1, 0x24
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Invalid Gouda rotation: "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :sswitch_0
+    const/4 v0, 0x3
+
+    :goto_0
+    return v0
+
+    :sswitch_1
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :sswitch_2
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :sswitch_3
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0x5a -> :sswitch_1
+        0xb4 -> :sswitch_2
+        0x10e -> :sswitch_3
+    .end sparse-switch
+.end method

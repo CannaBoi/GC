@@ -659,8 +659,9 @@ cihazı yavaşça yukarı kaldırın."</string>
     <string name="setting_front_camera_photo">Ön kamera fotoğraf çözünürlüğü</string>
     <string name="setting_front_camera_video">Ön kamera video çözünürlüğü</string>
     <string name="setting_general">Genel</string>
-    <string name="pref_developer_title">Hata Ayıklama ve Araçlar</string>
-    <string name="pref_parameters_camera_title">HDR+ Parametreleri</string>
+    <string name="setting_google_feedback">Geri bildirim gönder</string>
+    <string name="setting_google_help">Yardım</string>
+    <string name="setting_google_help_and_feedback">Yardım ve geri bildirim</string>
     <string name="setting_location">Konum</string>
     <string name="setting_off">Kapalı</string>
     <string name="setting_on">Açık</string>
@@ -763,6 +764,8 @@ Yavaş hareket ettirin"</string>
     <string name="zoom_announcement">Yakınlaştırma değeri: %.1f</string>
     <string name="zoom_minus_desc">Uzaklaştır</string>
     <string name="zoom_plus_desc">Yakınlaştır</string>
+    <string name="pref_developer_title">Hata Ayıklama ve Araçlar</string>
+    <string name="pref_parameters_camera_title">HDR+ Parametreleri</string>
     <string name="pref_parameters_camera_0">Varsayılan (en düşük)</string>
     <string name="pref_parameters_camera_1">Düşük</string>
     <string name="pref_parameters_camera_2">Orta</string>
@@ -774,20 +777,13 @@ Yavaş hareket ettirin"</string>
     <string name="pref_compress_dng_title">RAW görüntüleri işle</string>
     <string name="pref_compress_dng_summary">Dosya boyutunu küçültmek için DNG dosyalarını işle</string>
     <string name="pref_refocus_resolution_title">Lens Bulanıklığı çözünürlüğü</string>
-    <string name="pref_enable_zsl_title">"ZSL'i etkinleştir"</string>
-    <string name="pref_enable_zsl_summary">"Desteklenen yapılandırmalarda ZSL'i etkinleştir"</string>
-    <string name="pref_config_camera_title">Kamera HDR+ yapılandırması</string>
     <string name="pref_enable_lowlight_title">Düşük ışıkta iyileştirme</string>
     <string name="pref_enable_lowlight_summary">Düşük ışıkta pembe/kırmızımsı/magenta rengi tonlarını giderme</string>
     <string name="pref_enable_noise_title">İyileştirilmiş keskinlik</string>
-    <string name="pref_enable_noise_0">Varsayılan</string>
-    <string name="pref_enable_noise_1">Düşük</string>
-    <string name="pref_enable_noise_2">Orta</string>
     <string name="pref_enable_noise_summary">Keskinlik iyileştirilir fakat fotoğraflar biraz daha parazitli olur. Uygulamayı yeniden başlatın, değişiklikler gelecek başlangıçta etkili olacak.</string>
-    <string name="pref_enable_front_hdr_title">"Ön kamerada HDR+'ı devre dışı bırak"</string>
-    <string name="pref_enable_front_hdr_summary">"Eğer ön kamerada HDR+'ı devre dışı bırakırsanız portre modu çalışmayacak. Uygulamayı yeniden başlatın, değişiklikler gelecek başlangıçta etkili olacak."</string>
     <string name="pref_hdrplus_settings_title">HDR+ Ayarları</string>
     <string name="pref_misc_settings_title">Diğer Ayarlar</string>
     <string name="pref_disable_zoom_title">Portre modunda yakınlaştırmayı devre dışı bırak</string>
+    <string name="pref_config_camera_title">Kamera HDR+ yapılandırması</string>
     <string name="pref_enable_aemode_title">Otomatik pozlama modu</string>
 </resources>

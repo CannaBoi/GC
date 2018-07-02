@@ -88,7 +88,7 @@
 
     move-result v0
 
-    goto/16 :goto_1
+    if-eqz v0, :cond_1
 
     invoke-virtual {v1}, Lbip;->e()Z
 
@@ -122,7 +122,7 @@
 
     goto :goto_0
 
-    :goto_1
+    :cond_1
     invoke-interface {v2}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0

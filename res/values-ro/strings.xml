@@ -659,8 +659,9 @@ Mențineți obiectul centrat."</string>
     <string name="setting_front_camera_photo">Rezoluția foto a camerei din față</string>
     <string name="setting_front_camera_video">Rezoluția video a camerei din față</string>
     <string name="setting_general">Generale</string>
-    <string name="pref_developer_title">Depanaj si unelte</string>
-    <string name="pref_parameters_camera_title">Optiuni HDR+</string>
+    <string name="setting_google_feedback">Trimiteți feedback</string>
+    <string name="setting_google_help">Ajutor</string>
+    <string name="setting_google_help_and_feedback">Ajutor și feedback</string>
     <string name="setting_location">Locație</string>
     <string name="setting_off">Dezactivată</string>
     <string name="setting_on">Activată</string>
@@ -763,6 +764,8 @@ Mișcați încet"</string>
     <string name="zoom_announcement">Valoarea zoomului este %.1f</string>
     <string name="zoom_minus_desc">Micșorați</string>
     <string name="zoom_plus_desc">Măriți</string>
+    <string name="pref_developer_title">Depanaj si unelte</string>
+    <string name="pref_parameters_camera_title">Optiuni HDR+</string>
     <string name="pref_parameters_camera_0">Implicit (foarte scazut)</string>
     <string name="pref_parameters_camera_1">Scazut</string>
     <string name="pref_parameters_camera_2">Mediu</string>
@@ -774,20 +777,10 @@ Mișcați încet"</string>
     <string name="pref_compress_dng_title">Comprima imaginile RAW</string>
     <string name="pref_compress_dng_summary">Comprima DNG pentru marime redusa</string>
     <string name="pref_refocus_resolution_title">Rezolutie lens blur</string>
-    <string name="pref_enable_zsl_title">Activeaza ZSL</string>
-    <string name="pref_enable_zsl_summary">Activeaza modul Zero Latenta Obturator (ZSL) pentru configuratiile suportate</string>
-    <string name="pref_config_camera_title">Configuratie camera HDR+</string>
     <string name="pref_enable_lowlight_title">Imbunatateste in lumina slaba</string>
     <string name="pref_enable_lowlight_summary">Elimina nuanta roz/rosie/magenta in lumina slaba</string>
     <string name="pref_enable_noise_title">Claritate imbunatatita</string>
-    <string name="pref_enable_noise_0">Implicit (foarte scazut)</string>
-    <string name="pref_enable_noise_1">Scazut</string>
-    <string name="pref_enable_noise_2">Mediu</string>
     <string name="pref_enable_noise_summary">Claritatea este imbunatatita dar fotografiile au mai mult zgomot digital. Reporneste aplicatia pentru a activa optiunea.</string>
-    <string name="pref_enable_front_hdr_title">Dezactiveaza HDR+ frontal</string>
-    <string name="pref_enable_front_hdr_summary">Modul portret frontal nu functioneaza daca HDR+ frontal este dezactivat. Reporneste aplicatia pentru a activa optiunea.</string>
-    <string name="setting_google_feedback">Trimiteți feedback</string>
-    <string name="setting_google_help">Ajutor</string>
-    <string name="setting_google_help_and_feedback">Ajutor și feedback</string>
+    <string name="pref_config_camera_title">Configuratie camera HDR+</string>
     <string name="pref_enable_aemode_title">Mod expunere-auto</string>
 </resources>

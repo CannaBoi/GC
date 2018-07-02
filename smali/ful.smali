@@ -37,7 +37,7 @@
 
     const/4 v1, -0x1
 
-    const/16 v0, 0x1a4
+    const/16 v0, 0x348
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -99,7 +99,7 @@
 
     if-eqz v2, :cond_2
 
-    const/16 v0, 0x20d
+    const/16 v0, 0x41a
 
     :cond_1
     :goto_1
@@ -142,7 +142,7 @@
 
     if-eqz v2, :cond_3
 
-    const/16 v0, 0x244
+    const/16 v0, 0x488
 
     goto :goto_1
 
@@ -163,7 +163,7 @@
 
     if-eqz v2, :cond_4
 
-    const/16 v0, 0x172
+    const/16 v0, 0x2e4
 
     goto :goto_1
 

@@ -292,7 +292,7 @@
 .end method
 
 .method private final a(Lici;FLcom/google/googlex/gcam/AeResults;)Lcom/google/googlex/gcam/AeShotParams;
-    .locals 5
+    .locals 3
 
     const/4 v2, 0x1
 
@@ -324,53 +324,23 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/AeShotParams;->setProcess_bayer_for_payload(Z)V
 
-    const/16 v4, 0x64
-
-    iget-object v1, p0, Lcoq;->k:Lici;
-
-    iget v1, v1, Lici;->a:I
-
-    iget-object v3, p0, Lcoq;->l:Lici;
-
-    iget v3, v3, Lici;->a:I
-
-    sub-int v3, v1, v3
-
-    if-lt v3, v4, :cond_1
-
     iget-object v1, p0, Lcoq;->l:Lici;
 
     iget v1, v1, Lici;->a:I
 
-    :cond_1
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_width(I)V
 
-    const/16 v4, 0x64
-
-    iget-object v1, p0, Lcoq;->k:Lici;
-
-    iget v1, v1, Lici;->b:I
-
-    iget-object v3, p0, Lcoq;->l:Lici;
-
-    iget v3, v3, Lici;->b:I
-
-    sub-int v3, v1, v3
-
-    if-lt v3, v4, :cond_2
-
     iget-object v1, p0, Lcoq;->l:Lici;
 
     iget v1, v1, Lici;->b:I
 
-    :cond_2
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_height(I)V
 
     goto :goto_0
 .end method
 
 .method private final declared-synchronized a(ILeaq;Lgdv;Lcom/google/googlex/gcam/AeResults;Liic;Z)Lcpa;
-    .locals 26
+    .locals 23
 
     monitor-enter p0
 
@@ -598,23 +568,6 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotCallbacks;->setFinished_callback(Lcom/google/googlex/gcam/BurstCallback;)V
 
-    iget-object v2, v5, Lcpb;->B:Lbhn;
-
-    invoke-virtual {v2}, Lbhn;->l()I
-
-    move-result v23
-
-    if-nez v23, :cond_3
-
-    const/16 v23, 0x5f
-
-    :cond_3
-    iget-object v2, v5, Lcpb;->B:Lbhn;
-
-    invoke-virtual {v2}, Lbhn;->m()I
-
-    move-result v24
-
     sget-object v2, Lcnv;->e:Lcnv;
 
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -645,6 +598,10 @@
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setFull_metering_sweep_frame_count(I)V
 
+    invoke-static/range {v20 .. v20}, Lcns;->a(I)I
+
+    move-result v4
+
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcoq;->i:Lgdq;
@@ -661,7 +618,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_3
 
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -671,50 +628,44 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string/jumbo v1, "ro.miui.ui.version.name"
 
-    const/16 v1, 0x1a
+    const-string/jumbo v0, ""
 
-    if-ge v0, v1, :cond_4
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static/range {v20 .. v20}, Lcns;->a(I)I
+    move-result-object v0
 
-    move-result v4
+    const-string/jumbo v1, ""
 
-    const/4 v8, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eq v4, v8, :cond_10
+    move-result v0
 
-    const/4 v8, 0x1
+    if-nez v0, :cond_3
 
-    if-eq v4, v8, :cond_11
-
-    const/4 v8, 0x2
-
-    if-eq v4, v8, :cond_12
-
-    const/4 v8, 0x3
-
-    if-eq v4, v8, :cond_13
-
-    goto :goto_2
-
-    :cond_4
-    invoke-static/range {v20 .. v20}, Lcns;->a(I)I
+    invoke-static/range {v20 .. v20}, Lcns;->b(I)I
 
     move-result v4
 
-    :goto_2
-    sput v4, Lcok;->n:I
-
+    :cond_3
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setImage_rotation(I)V
 
-    move/from16 v4, v23
+    const-string/jumbo v4, "pref_compress_jpeg_key"
 
+    invoke-static {v4}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const/16 v4, 0x5f
+
+    :cond_4
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setFinal_jpg_quality(I)V
@@ -729,7 +680,11 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setSave_merged_dng(Z)V
 
-    move/from16 v2, v24
+    const-string/jumbo v2, "pref_compress_dng_key"
+
+    invoke-static {v2}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v2
 
     move-object/from16 v0, v22
 
@@ -757,7 +712,7 @@
 
     if-eqz v2, :cond_5
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     move-object/from16 v0, v22
 
@@ -788,7 +743,7 @@
 
     const/4 v2, 0x1
 
-    :goto_3
+    :goto_2
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setAllow_temporal_binning(Z)V
@@ -807,7 +762,7 @@
 
     const/4 v2, 0x0
 
-    :goto_4
+    :goto_3
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setWb_mode(I)V
@@ -816,7 +771,7 @@
 
     const-string v2, "z"
 
-    :goto_5
+    :goto_4
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setSoftware_suffix(Ljava/lang/String;)V
@@ -841,7 +796,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setZsl_base_frame_index_hint(I)V
 
-    :goto_6
+    :goto_5
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcoq;->i:Lgdq;
@@ -966,7 +921,7 @@
     :cond_7
     const/4 v3, 0x1
 
-    :goto_7
+    :goto_6
     if-eqz v3, :cond_8
 
     invoke-virtual {v2}, Ljht;->a()Z
@@ -1114,7 +1069,7 @@
 
     move-result-object v7
 
-    :goto_8
+    :goto_7
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcoq;->t:Ljht;
@@ -1155,7 +1110,7 @@
 
     move-object v2, v3
 
-    :goto_9
+    :goto_8
     monitor-exit p0
 
     return-object v2
@@ -1163,18 +1118,18 @@
     :cond_9
     const/4 v2, 0x0
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :cond_a
     const/4 v2, 0x1
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :cond_b
     :try_start_2
     const-string v2, "n"
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 
     :cond_c
     move-object/from16 v0, p0
@@ -1197,42 +1152,22 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :cond_d
     const/4 v3, 0x0
 
-    goto/16 :goto_7
+    goto/16 :goto_6
 
     :cond_e
     const/4 v7, 0x0
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_f
     const/4 v2, 0x0
 
-    goto :goto_9
-
-    :cond_10
-    const/4 v4, 0x2
-
-    goto/16 :goto_2
-
-    :cond_11
-    const/4 v4, 0x3
-
-    goto/16 :goto_2
-
-    :cond_12
-    const/4 v4, 0x0
-
-    goto/16 :goto_2
-
-    :cond_13
-    const/4 v4, 0x1
-
-    goto/16 :goto_2
+    goto :goto_8
 
     nop
 

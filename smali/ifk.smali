@@ -15,6 +15,41 @@
     return-void
 .end method
 
+.method public static b()Z
+    .locals 2
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus5T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "OnePlus5"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
 .method public final a(IIII)Liin;
@@ -22,50 +57,41 @@
 
     new-instance v0, Lifi;
 
-    const/16 v1, 0x23
+    invoke-static {}, Lifk;->b()Z
 
-    if-ne p3, v1, :cond_0
+    move-result v1
 
-    const/16 v1, 0x23
+    if-eqz v1, :cond_1
 
-    :goto_0
-    invoke-static {p1, p2, v1, p4}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
+    const/16 v1, 0x25
 
-    move-result-object v2
+    if-eq p3, v1, :cond_0
 
-    invoke-direct {v0, v2}, Lifi;-><init>(Landroid/media/ImageReader;)V
+    invoke-static {p1, p2, p3, p4}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lifi;-><init>(Landroid/media/ImageReader;)V
 
     return-object v0
 
     :cond_0
-    const/16 v1, 0x26
+    const/16 v1, 0x20
 
-    if-ne p3, v1, :cond_1
+    invoke-static {p1, p2, v1, p4}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
-    const/16 v1, 0x26
+    move-result-object p0
 
-    goto :goto_0
+    invoke-direct {v0, p0}, Lifi;-><init>(Landroid/media/ImageReader;)V
+
+    return-object v0
 
     :cond_1
-    const/16 v1, 0x25
+    invoke-static {p1, p2, p3, p4}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
-    if-ne p3, v1, :cond_2
+    move-result-object v1
 
-    const/16 v1, 0x25
+    invoke-direct {v0, v1}, Lifi;-><init>(Landroid/media/ImageReader;)V
 
-    goto :goto_0
-
-    :cond_2
-    const/16 v1, 0x20
-
-    if-ne p3, v1, :cond_3
-
-    const/16 v1, 0x20
-
-    goto :goto_0
-
-    :cond_3
-    move v1, p3
-
-    goto :goto_0
+    return-object v0
 .end method

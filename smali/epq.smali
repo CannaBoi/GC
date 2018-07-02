@@ -36,7 +36,7 @@
 
     const-string v1, "pref_micro_mode"
 
-    sget-object v2, Lgms;->b:Lgms;
+    sget-object v2, Lgms;->a:Lgms;
 
     iget v2, v2, Lgms;->d:I
 

@@ -658,8 +658,9 @@
     <string name="setting_front_camera_photo">전면 카메라 사진 해상도</string>
     <string name="setting_front_camera_video">전면 카메라 동영상 해상도</string>
     <string name="setting_general">기본 설정</string>
-    <string name="pref_developer_title">디버깅 및 도구</string>
-    <string name="pref_parameters_camera_title">HDR+ 파라미터</string>
+    <string name="setting_google_feedback">의견 보내기</string>
+    <string name="setting_google_help">도움말</string>
+    <string name="setting_google_help_and_feedback">고객센터</string>
     <string name="setting_location">위치</string>
     <string name="setting_off">OFF</string>
     <string name="setting_on">ON</string>
@@ -762,6 +763,8 @@
     <string name="zoom_announcement">현재 화면 배율은 %.1f입니다.</string>
     <string name="zoom_minus_desc">축소</string>
     <string name="zoom_plus_desc">확대</string>
+    <string name="pref_developer_title">디버깅 및 도구</string>
+    <string name="pref_parameters_camera_title">HDR+ 파라미터</string>
     <string name="pref_parameters_camera_0">기본 (제일 낮음)</string>
     <string name="pref_parameters_camera_1">낮음</string>
     <string name="pref_parameters_camera_2">중간</string>
@@ -773,9 +776,6 @@
     <string name="pref_compress_dng_title">RAW 이미지 압축</string>
     <string name="pref_compress_dng_summary">파일 크기를 줄이기 위해 DNG 압축</string>
     <string name="pref_refocus_resolution_title">아웃포커스 해상도</string>
-    <string name="pref_config_camera_title">카메라 HDR+ 구성</string>
     <string name="pref_enable_lowlight_title">저조도에서 향상</string>
-    <string name="setting_google_feedback">의견 보내기</string>
-    <string name="setting_google_help">도움말</string>
-    <string name="setting_google_help_and_feedback">고객센터</string>
+    <string name="pref_config_camera_title">카메라 HDR+ 구성</string>
 </resources>

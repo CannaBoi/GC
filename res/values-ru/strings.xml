@@ -659,8 +659,9 @@
     <string name="setting_front_camera_photo">Разрешение фронтальной камеры (фото)</string>
     <string name="setting_front_camera_video">Разрешение фронтальной камеры (видео)</string>
     <string name="setting_general">Общие</string>
-    <string name="pref_developer_title">Отладка и инструменты</string>
-    <string name="pref_parameters_camera_title">Параметры HDR+</string>
+    <string name="setting_google_feedback">Отправить отзыв</string>
+    <string name="setting_google_help">Справка</string>
+    <string name="setting_google_help_and_feedback">Справка/отзыв</string>
     <string name="setting_location">Местоположение</string>
     <string name="setting_off">Выкл.</string>
     <string name="setting_on">Вкл.</string>
@@ -763,6 +764,8 @@
     <string name="zoom_announcement">Масштаб: %.1f</string>
     <string name="zoom_minus_desc">Уменьшить</string>
     <string name="zoom_plus_desc">Увеличить</string>
+    <string name="pref_developer_title">Отладка и инструменты</string>
+    <string name="pref_parameters_camera_title">Параметры HDR+</string>
     <string name="pref_parameters_camera_0">Минимальные (По умолчанию)</string>
     <string name="pref_parameters_camera_1">Низкие</string>
     <string name="pref_parameters_camera_2">Средние</string>
@@ -774,20 +777,13 @@
     <string name="pref_compress_dng_title">Сжатие RAW-изображений</string>
     <string name="pref_compress_dng_summary">Сжатие DNG для уменьшения размера файла</string>
     <string name="pref_refocus_resolution_title">Разрешение фото в режиме размытия</string>
-    <string name="pref_enable_zsl_title">ZSL (Нулевая задержка затвора)</string>
-    <string name="pref_enable_zsl_summary">Использовать ZSL для поддерживаемых конфигураций</string>
-    <string name="pref_config_camera_title">Конфигурация HDR+</string>
     <string name="pref_enable_lowlight_title">Улучшить фото при слабом освещении</string>
     <string name="pref_enable_lowlight_summary">Удаление оттенков розового/красного/пурпурного цвета в условиях низкой освещенности</string>
     <string name="pref_enable_noise_title">Улучшенная резкость</string>
-    <string name="pref_enable_noise_0">Минимальные</string>
-    <string name="pref_enable_noise_1">Низкие</string>
-    <string name="pref_enable_noise_2">Средние</string>
     <string name="pref_enable_noise_summary">Повышается резкость, но возрастают шумы. Чтобы изменения вступили в силу требуется перезапуск приложения.</string>
-    <string name="pref_enable_front_hdr_title">Выключить HDR+ на фронтальной камере</string>
-    <string name="pref_enable_front_hdr_summary">После выключения портретный режим на фронт.камере работать не будет. Чтобы изменения вступили в силу требуется перезапуск приложения</string>
     <string name="pref_hdrplus_settings_title">Настройки HDR+</string>
     <string name="pref_misc_settings_title">Другие настройки</string>
     <string name="pref_aemode_title">Режим авто-экспозиции</string>
     <string name="pref_disable_zoom_title">Отключить масштабирование в портретном режиме</string>
+    <string name="pref_config_camera_title">Конфигурация HDR+</string>
 </resources>

@@ -229,12 +229,6 @@
 .method public final c()Z
     .locals 1
 
-    invoke-virtual {p0}, Lgzz;->l()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
     iget-object v0, p0, Lgzz;->b:Lihk;
 
     iget-boolean v0, v0, Lihk;->h:Z
@@ -260,7 +254,7 @@
     return v0
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -391,7 +385,7 @@
 .method public final g()Z
     .locals 1
 
-    invoke-virtual {p0}, Lgzz;->c()Z
+    invoke-virtual {p0}, Lgzz;->i()Z
 
     move-result v0
 
@@ -461,48 +455,36 @@
 .end method
 
 .method public final j()Z
-    .locals 1
+    .locals 2
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    iget-object v0, p0, Lgzz;->b:Lihk;
+    const-string v1, "OnePlus3"
 
-    invoke-virtual {v0}, Lihk;->c()Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "OnePlus3T"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :cond_0
-    return v0
-.end method
-
-.method public final k()Z
-    .locals 1
-
-    iget-object v0, p0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->n:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public final l()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

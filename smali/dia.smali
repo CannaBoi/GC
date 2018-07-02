@@ -28,7 +28,7 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 7
 
     const/16 v3, 0x23
 
@@ -94,6 +94,14 @@
     goto :goto_0
 
     :cond_1
+    const-string/jumbo v0, "pref_support_level_override_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->INFO_SUPPORTED_HARDWARE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p1, v0}, Lgdq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -249,6 +257,52 @@
     invoke-static {v1, v0}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Ldij;->c:Ldij;
+
+    goto/16 :goto_1
+
+    :cond_8
+    const/16 v6, 0x1
+
+    if-eq v5, v6, :cond_9
+
+    const/16 v6, 0x2
+
+    if-eq v5, v6, :cond_a
+
+    const/16 v6, 0x3
+
+    if-eq v5, v6, :cond_b
+
+    const/16 v6, 0x4
+
+    if-eq v5, v6, :cond_c
+
+    const/16 v6, 0x5
+
+    if-eq v5, v6, :cond_d
+
+    :cond_9
+    sget-object v0, Ldij;->a:Ldij;
+
+    goto/16 :goto_1
+
+    :cond_a
+    sget-object v0, Ldij;->b:Ldij;
+
+    goto/16 :goto_1
+
+    :cond_b
+    sget-object v0, Ldij;->c:Ldij;
+
+    goto/16 :goto_1
+
+    :cond_c
+    sget-object v0, Ldij;->d:Ldij;
+
+    goto/16 :goto_1
+
+    :cond_d
+    sget-object v0, Ldij;->e:Ldij;
 
     goto/16 :goto_1
 .end method

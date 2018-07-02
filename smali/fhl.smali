@@ -37,6 +37,14 @@
 
     if-eqz v0, :cond_0
 
+    const-string/jumbo v0, "pref_disable_slowmotion_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     iget-object v0, p0, Lfhl;->a:Ljava/util/List;
 
     sget-object v1, Lfkf;->f:Lfkf;

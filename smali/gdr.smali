@@ -290,14 +290,6 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lgdr;->e:Lgzz;
-
-    invoke-virtual {v0}, Lgzz;->k()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
     :cond_0
     iget-object v0, p0, Lgdr;->e:Lgzz;
 

@@ -665,7 +665,9 @@
 .method final c()V
     .locals 3
 
-    invoke-static {}, Lbhn;->t()I
+    const-string/jumbo v0, "pref_disable_zoom_key"
+
+    invoke-static {v0}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v2
 

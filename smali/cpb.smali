@@ -344,11 +344,11 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setTuning_locked(Z)V
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_provide_both_yuv_and_raw_for_metering(Z)V
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_provide_both_yuv_and_raw_for_payload(Z)V
 
@@ -378,11 +378,9 @@
 
     const/4 v4, 0x3
 
-    iget-object v2, p0, Lcpb;->D:Lcnu;
+    const-string/jumbo v2, "pref_parameters_camera_key"
 
-    iget-object v2, v2, Lcnu;->e:Lbhn;
-
-    invoke-virtual {v2}, Lbhn;->j()I
+    invoke-static {v2}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v2
 
@@ -453,7 +451,11 @@
 
     if-eqz v2, :cond_1
 
-    const/4 v2, 0x0
+    const-string/jumbo v2, "pref_use_hexagon_key"
+
+    invoke-static {v2}, Lbhn;->a(Ljava/lang/String;)I
+
+    move-result v2
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setUse_hexagon(Z)V
 

@@ -237,7 +237,7 @@
 
     const-string v1, "camera.use_photos"
 
-    invoke-virtual {p2}, Lgzz;->c()Z
+    invoke-virtual {p2}, Lgzz;->g()Z
 
     move-result v2
 
@@ -249,7 +249,7 @@
 
     const-string v1, "camera.diet_burst"
 
-    invoke-virtual {p2}, Lgzz;->c()Z
+    invoke-virtual {p2}, Lgzz;->g()Z
 
     move-result v2
 
@@ -377,7 +377,7 @@
 
     iget-object v0, p0, Lbip;->b:Lgzz;
 
-    invoke-virtual {v0}, Lgzz;->g()Z
+    invoke-virtual {v0}, Lgzz;->i()Z
 
     move-result v0
 

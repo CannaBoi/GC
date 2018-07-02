@@ -99,9 +99,9 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcnu;->e:Lbhn;
+    const-string/jumbo v2, "pref_parameters_camera_key"
 
-    invoke-virtual {v2}, Lbhn;->j()I
+    invoke-static {v2}, Lbhn;->a(Ljava/lang/String;)I
 
     move-result v2
 
